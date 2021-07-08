@@ -2,15 +2,6 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-.smd_show {
-  display: none !important;
-}
-.tab_show {
-  display: none !important;
-}
-.mob_show {
-  display: none !important;
-}
 body {
   overflow-x: hidden;
 }
@@ -26,6 +17,15 @@ body {
   --c10: 10%;
   --c11: 9.0909%;
   --c12: 8.33333%;
+}
+.smd_show {
+  display: none !important;
+}
+.tab_show {
+  display: none !important;
+}
+.mob_show {
+  display: none !important;
 }
 p.card_name {
   font-weight: 500;
@@ -343,6 +343,7 @@ a.blank {
 .flex_r {
   justify-content: flex-end;
 }
+/*content aligned to right but in tablet and phone is aligned to center*/
 .flex_mob {
   justify-content: flex-end;
 }
