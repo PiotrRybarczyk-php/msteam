@@ -59,11 +59,13 @@ p.card_name {
   align-items: center;
 }
 .item_container_picture {
-  max-width: 540px;
   width: 100%;
   display: flex;
   position: relative;
   justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .box_normal {
@@ -106,10 +108,9 @@ p.card_name {
 .box_center {
   width: 100%;
   min-height: 160px;
-  display: flex;
+  display: block;
   position: relative;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 .textbox_small {
@@ -179,7 +180,7 @@ p.card_name {
   padding-bottom: 50px !important;
 }
 .nav_logo {
-  width: 23vw;
+  width: 240px;
 }
 .nav_pic {
   width: 15vw;
@@ -347,6 +348,9 @@ a.blank {
 .flex_mob {
   justify-content: flex-end;
 }
+.flex_mob_l {
+  justify-content: flex-start;
+}
 .debug_black {
   border: 1px dotted black;
 }
@@ -488,7 +492,6 @@ a.blank {
     justify-content: center !important;
   }
   .item_container_picture {
-    width: min-content;
     display: flex;
     position: relative;
     justify-content: center;
@@ -496,19 +499,21 @@ a.blank {
   .flex_mob {
     justify-content: center;
   }
+  .flex_mob_l {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 500px) {
+  .nav_logo {
+    width: 50vw;
+  }
   .mob_hide {
     display: none;
   }
 
   .mob_show {
     display: flex !important;
-  }
-
-  .item_container_picture {
-    width: 100%;
   }
   .main-header__navbar {
     position: fixed;

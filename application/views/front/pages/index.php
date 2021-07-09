@@ -8,7 +8,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="carousel-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png);">
-                            <div class="carousel-content d-none d-md-block">
+                            <div class="carousel-content d-md-block">
                                 <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
                                 <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
                                 <a href="#">USŁUGI</a>
@@ -17,26 +17,28 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png);">
-                            <div class="carousel-content d-none d-md-block">
+                            <div class="carousel-content d-md-block">
                                 <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
                                 <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
+                                <a href="#">Lorem Ipsum</a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png);">
-                            <div class="carousel-content d-none d-md-block">
+                            <div class="carousel-content d-md-block">
                                 <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
                                 <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
+                                <a href="#">Lorem Ipsum</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -58,7 +60,7 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/electrical-engineer-using-digital-multi-meter-checking-electric-current-voltage-circuit-breaker.jpg);">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_2.jpg);">
                                 <div class="img_overlay">
                                     <p>Sieci i Instalacje Elektryczne</p>
                                 </div>
@@ -67,7 +69,7 @@
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/solar-panel-with-blue-sky-sunset-concept-clean-energy-electric-alternative-power-nature.jpg);">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_10.jpg);">
                                 <div class="img_overlay">
                                     <p>Fotowoltaika</p>
                                 </div>
@@ -77,7 +79,7 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/excavator-sandpit-during-earthmoving-works-construction-site.jpg);">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_5.jpg);">
                                 <div class="img_overlay">
                                     <p>Roboty Ziemne</p>
                                 </div>
@@ -112,7 +114,7 @@
                     </div>
                 </div>
                 <div class="item_container_align small_padding">
-                    <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/excavator-sandpit-during-earthmoving-works-construction-site.jpg);"></div>
+                    <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_7.jpg);"></div>
                 </div>
                 <div class="item_container_center tab_show mt-5"><a class="blank" href="#"><button class="btn_JS">Poznaj Nas</button></a></div>
             </div>
@@ -123,6 +125,162 @@
                     <div class="separator-line"></div>
                     <div class="header-title">FACHOWI I KOMPETENTNI</div>
                     <div class="separator-line"></div>
+                </div>
+                <div class="content-section">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus odio ut arcu euismod consectetur. Etiam fermentum enim sit amet dolor consequat efficitur. Pellentesque feugiat odio quis placerat rutrum. Aenean et tincidunt massa. Duis accumsan, odio eu vestibulum pharetra, nisi augue pulvinar ipsum, congue hendrerit nisi turpis vehicula diam. Phasellus posuere eleifend diam in malesuada. Donec euismod nunc sed dignissim bibendum. Integer id justo in erat pharetra venenatis viverra ac elit. Praesent sodales augue sed placerat commodo. Sed nec dictum ante. Nulla in lobortis risus lectus.
+                </div>
+            </div>
+            <div class="box_center main_padding">
+                <div class="grid-4 gtab-2 gmob-1">
+                    <div class="item_container small_padding">
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/quality.svg"></span></div>
+                        <div class="item_container_center">
+                            <p class="tile_header">SYSTEM ZARZĄDZANIA JAKOŚCIĄ</p>
+                        </div>
+                        <div class="item_container_center">
+                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                        </div>
+                    </div>
+                    <div class="item_container small_padding">
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/permission.svg"></span></div>
+                        <div class="item_container_center">
+                            <p class="tile_header">Uprawnienia</p>
+                        </div>
+                        <div class="item_container_center">
+                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                        </div>
+                    </div>
+                    <div class="item_container small_padding">
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/permission.svg"></span></div>
+                        <div class="item_container_center">
+                            <p class="tile_header">Uprawnienia</p>
+                        </div>
+                        <div class="item_container_center">
+                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                        </div>
+                    </div>
+                    <div class="item_container small_padding">
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/certificate.svg"></span></div>
+                        <div class="item_container_center">
+                            <p class="tile_header">CERTYFIKAT JAKOŚCI</p>
+                        </div>
+                        <div class="item_container_center">
+                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="header-section">
+                    <div class="separator-line"></div>
+                    <div class="header-title">DO NASZYCH EKIP POSZUKUJEMY</div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
+                <div class="box_flex flex_mob" style="min-height:500px;">
+                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_9.jpg)"></div>
+                </div>
+                <div class="box_flex flex_mob small_padding">
+                    <div class="grid-1" style="max-width:640px;">
+                        <div class="box_flex">
+                            <div class="absolute_el" style="top:70px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
+                            <p class="second_header">STANOWISKO</p>
+                        </div>
+                        <p class="content_with_padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in sodales tellus, quis egestas lorem. Quisque sit amet risus suscipit, aliquam enim ac, rhoncus diam. In faucibus nibh sed sem efficitur, in dapibus sapien venenatis. Sed odio ante, maximus nec nisi ac, dapibus aliquam nibh. Duis consequat luctus felis vitae hendrerit. Nam mattis ultricies fermentum. Nullam ullamcorper elit proin.</p>
+                        <div class="grid-2 gmob-1" style="max-width:504px;">
+                            <div class="item_container_center mb-1"><a class="blank" href="#"><button class="btn_static">Kontakt</button></a></div>
+                            <div class="item_container_center mb-1"><a class="blank" href="#"><button class="btn_static">Zobacz Więcej Ofert</button></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="header-section">
+                    <div class="separator-line"></div>
+                    <div class="header-title">AKTUALNOŚCI</div>
+                    <div class="separator-line"></div>
+                </div>
+                <div class="content-section" style="text-align:center;">
+                    W naszej zakładce przeczytasz o aktualnościach w branży o realizacjach i doświadczeniach oraz o naszej obecności w środowisku lokalnym
+                </div>
+            </div>
+            <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
+                <div class="box_flex flex_mob small_padding">
+                    <div class="grid-1" style="max-width:640px;">
+                        <div class="box_flex">
+                            <p class="second_header">NOWE PRZEPISY DLA BRANŻY INSTALATORSKIEJ</p>
+                        </div>
+                        <p class="content_with_padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in sodales tellus, quis egestas lorem. Quisque sit amet risus suscipit, aliquam enim ac, rhoncus diam. In faucibus nibh sed sem efficitur, in dapibus sapien venenatis. Sed odio ante, maximus nec nisi ac, dapibus aliquam nibh. Duis consequat luctus felis vitae hendrerit. Nam mattis ultricies fermentum. Nullam ullamcorper elit proin.</p>
+                        <div class="box_flex flex_mob tab_hide"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
+                    </div>
+                </div>
+                <div class="box_flex flex_mob" style="min-height:500px;">
+                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_6.jpg)"></div>
+                </div>
+                <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
+            </div>
+        </section>
+        <section style="margin-bottom:140px">
+            <div class="container">
+                <div class="header-section">
+                    <div class="separator-line"></div>
+                    <div class="header-title">WSPÓŁPRACOWALI Z NAMI</div>
+                    <div class="separator-line"></div>
+                </div>
+                <div class="content-section" style="text-align:center;">
+                    Istniejemy na rynku od 1992 roku. W tym czasie wykonaliśmy naprawdę wiele realizacji. Zobacz nasze projekty i kontrahentów
+                </div>
+            </div>
+            <div class="grid-1 main_padding">
+                <div class="grid-3 gtab-1 mb-5">
+                    <div class="item_container_center small_padding">
+                        <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
+                        <div class="offer-photo-border">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_2.jpg);height:21vw;">
+                                <div class="img_overlay">
+                                    <div class="item_container">
+                                        <p class="small_content" style="text-transform:lowercase;">Wykonanie instalacji elektrycznej na terenie</p>
+                                        <p class="inner_header">KGHM GŁOGÓW</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_container_center small_padding">
+                        <div class="offer-photo-border">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_10.jpg);height:21vw;">
+                                <div class="img_overlay">
+                                    <div class="item_container">
+                                        <p class="small_content" style="text-transform:lowercase;">Modernizacja oświetlenia drogowego</p>
+                                        <p class="inner_header">Miasto Jawor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_container_center small_padding">
+                        <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
+                        <div class="offer-photo-border">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_5.jpg);height:21vw;">
+                                <div class="img_overlay">
+                                    <div class="item_container">
+                                        <p class="small_content" style="text-transform:lowercase;">Montaż instalacji PhotoVoltaicznej na stadionie piłkarskim</p>
+                                        <p class="inner_header">FC Ingolstadt 04</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-1">
+                    <div class="item_container_center">
+                        <a class="blank" href="#"><button class="btn_JS">ZOBACZ INNE REALIZACJE</button></a>
+                    </div>
                 </div>
             </div>
         </section>

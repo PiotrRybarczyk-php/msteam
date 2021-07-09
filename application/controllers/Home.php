@@ -22,39 +22,19 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		echo loadViewsFront('index', $data);
 	}
-	public function contact()
+	public function work()
 	{
 		$data = loadDefaultDataFront();
-		$data['logo'] = $this->back_m->get_all('logos');
-		$data['contacts'] = $this->back_m->get_all('distribs');
-		echo loadViewsFront('contact', $data);
+		echo loadViewsFront('work', $data);
 	}
-	public function catalog()
+	public function blog()
 	{
 		$data = loadDefaultDataFront();
-		$data['logo'] = $this->back_m->get_all('logos');
-		echo loadViewsFront('catalog', $data);
+		echo loadViewsFront('blog', $data);
 	}
-	public function certificates()
+	public function about()
 	{
 		$data = loadDefaultDataFront();
-		$data['logo'] = $this->back_m->get_all('logos');
-		echo loadViewsFront('certificates', $data);
-	}
-	public function certificates_old()
-	{
-		$data = loadDefaultDataFront();
-		$data['logo'] = $this->back_m->get_all('logos');
-		$data['certificate'] = $this->back_m->get_all('certificates');
-		$data['type'] = "archive";
-		echo loadViewsFront('certificates_subpage', $data);
-	}
-	public function certificates_new()
-	{
-		$data = loadDefaultDataFront();
-		$data['logo'] = $this->back_m->get_all('logos');
-		$data['certificate'] = $this->back_m->get_all('certificates');
-		$data['type'] = "current";
-		echo loadViewsFront('certificates_subpage', $data);
+		echo loadViewsFront('about', $data);
 	}
 }
