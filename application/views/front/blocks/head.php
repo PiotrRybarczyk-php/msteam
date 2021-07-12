@@ -7,5 +7,5 @@
   <link href="<?= base_url(); ?>assets/front/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
   <link href="<?= base_url(); ?>assets/front/css/style.css" rel="stylesheet" crossorigin="anonymous" />
   <link href="<?= base_url(); ?>assets/front/css/qgrid.css" rel="stylesheet" crossorigin="anonymous" />
-  <title>Hello, world!</title>
+  <title>MSTeam</title>
 </head>

@@ -36,16 +36,24 @@
                 <p style="font-size:20px;font-weight:600;opacity:1;">Loren Ipsum</p>
             </div>
             <div class="item_container" style="height:65px;">
-                <p style="font-size:20px;">Aktualności</p>
+                <a class="blank" href="<?= base_url('aktualnosci'); ?>">
+                    <p style="font-size:20px;">Aktualności</p>
+                </a>
             </div>
             <div class="item_container" style="height:65px;">
-                <p style="font-size:20px;">Praca</p>
+                <a class="blank" href="<?= base_url('praca'); ?>">
+                    <p style="font-size:20px;">Praca</p>
+                </a>
             </div>
             <div class="item_container" style="height:65px;">
-                <p style="font-size:20px;">Oferta</p>
+                <a class="blank" href="<?= base_url(); ?>">
+                    <p style="font-size:20px;">Oferta</p>
+                </a>
             </div>
             <div class="item_container" style="height:65px;">
-                <p style="font-size:20px;">Realizacje</p>
+                <a class="blank" href="<?= base_url(); ?>">
+                    <p style="font-size:20px;">Realizacje</p>
+                </a>
             </div>
         </div>
         <div class=" item_container_center size-3 tab_size-12">

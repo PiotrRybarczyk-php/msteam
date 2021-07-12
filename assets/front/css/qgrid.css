@@ -345,6 +345,7 @@ a.link:hover {
 
 a.blank {
   color: unset;
+  text-decoration: none;
 }
 
 .flex_c {

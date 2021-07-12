@@ -99,6 +99,7 @@
 .header-section .header-title {
   width: 100%;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .header-section .separator-line {
@@ -470,11 +471,13 @@ p.contact_info {
     display: inline-block;
     border: 1px solid #dd2a1b;
     color: #dd2a1b;
-    padding: 10px 40px;
+    padding: 10px 10px;
     transition: 0.5s all;
     text-decoration: none;
     font-size: 38px;
     margin-top: 50px;
+    text-align: center;
+    width: 260px;
   }
   .header-section .header-title {
     font-size: 22px;

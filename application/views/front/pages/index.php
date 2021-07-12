@@ -20,7 +20,7 @@
                             <div class="carousel-content d-md-block">
                                 <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
                                 <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
-                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">LOREM IPSUM</a>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                             <div class="carousel-content d-md-block">
                                 <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
                                 <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
-                                <a href="#">Lorem Ipsum</a>
+                                <a href="#">Zobacz Więcej</a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">TAK DZIAŁAMY</div>
+                    <div class="header-title">tak działamy</div>
                     <div class="separator-line"></div>
                 </div>
                 <div class="content-section">

@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">O nas</a>
+              <a class="nav-link active" aria-current="page" href="<?= base_url('onas'); ?>">O nas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Z nami zrealizujesz</a>
@@ -20,10 +20,10 @@
               <a class="nav-link" href="#">Projekty</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Praca</a>
+              <a class="nav-link" href="<?= base_url('praca'); ?>">Praca</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kontakt</a>
+              <a class="nav-link" href="<?= base_url('kontakt'); ?>">Kontakt</a>
             </li>
           </ul>
           <div class="mb-2">
