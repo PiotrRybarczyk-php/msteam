@@ -23,7 +23,7 @@
                         <p class="second_header">Tytuł Artykułu</p>
                     </div>
                     <p class="content_with_padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in sodales tellus, quis egestas lorem. Quisque sit amet risus suscipit, aliquam enim ac, rhoncus diam. In faucibus nibh sed sem efficitur, in dapibus sapien venenatis. Sed odio ante, maximus nec nisi ac, dapibus aliquam nibh. Duis consequat luctus felis vitae hendrerit. Nam mattis ultricies fermentum. Nullam ullamcorper elit proin.</p>
-                    <div class="box_flex flex_mob_l"><a class="blank" href="#"><button class="btn_static">czytaj więcej</button></a></div>
+                    <div class="box_flex flex_mob_l"><a class="blank" href="<?= base_url('wpis/1/test'); ?>"><button class="btn_static">czytaj więcej</button></a></div>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
                         <p class="second_header">Tytuł Artykułu</p>
                     </div>
                     <p class="content_with_padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in sodales tellus, quis egestas lorem. Quisque sit amet risus suscipit, aliquam enim ac, rhoncus diam. In faucibus nibh sed sem efficitur, in dapibus sapien venenatis. Sed odio ante, maximus nec nisi ac, dapibus aliquam nibh. Duis consequat luctus felis vitae hendrerit. Nam mattis ultricies fermentum. Nullam ullamcorper elit proin.</p>
-                    <div class="box_flex flex_mob tab_hide"><a class="blank" href="#"><button class="btn_static">czytaj więcej</button></a></div>
+                    <div class="box_flex flex_mob tab_hide"><a class="blank" href="<?= base_url('wpis/2/test'); ?>"><button class="btn_static">czytaj więcej</button></a></div>
                 </div>
             </div>
             <div class="box_flex flex_c" style="min-height:500px;">
@@ -45,7 +45,7 @@
                     <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_3.jpg)"></div>
                 </div>
             </div>
-            <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="#"><button class="btn_static">czytaj więcej</button></a></div>
+            <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="<?= base_url('wpis/2/test'); ?>"><button class="btn_static">czytaj więcej</button></a></div>
         </div>
     </div>
     <hr class="tab_show" style="margin-left:1.2vw;margin-right:1.2vw;">

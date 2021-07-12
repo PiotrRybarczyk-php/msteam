@@ -25,10 +25,14 @@
                 <p style="font-size:20px;font-weight:600;opacity:1;">Ważne Informacje</p>
             </div>
             <div class="item_container" style="height:65px;">
-                <p style="font-size:20px;">Polityka RODO</p>
+                <a class="blank" href="#">
+                    <p style="font-size:20px;">Polityka RODO</p>
+                </a>
             </div>
             <div class="item_container" style="height:65px;">
-                <p style="font-size:20px;">Kontakt</p>
+                <a class="blank" href="<?= base_url('kontakt'); ?>">
+                    <p style="font-size:20px;">Kontakt</p>
+                </a>
             </div>
         </div>
         <div class="item_container size-1 tab_size-3 mob_size-6">
