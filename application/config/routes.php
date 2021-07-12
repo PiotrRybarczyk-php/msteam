@@ -12,6 +12,8 @@ $route['projekty'] = 'home/projects';
 $route['praca'] = 'home/work';
 $route['kontakt'] = 'home/contact';
 $route['aktualnosci'] = 'home/blog';
+$route['wpis/(.*)/(.+)'] = 'home/single_article/$1/$2';
+$route['kontakt'] = 'home/contact';
 //SCIAGA
 // $route['odziez/(.*)/(.+)'] = 'home/odziez/$1/$2';
 // $route['obuwie/(.*)/(.+)'] = 'home/obuwie/$1/$2';

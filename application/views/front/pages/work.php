@@ -1,6 +1,6 @@
-<div class="banner" style="background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_12.jpg)">
+<div class="banner" style="background-image:url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png)">
     <div class="item_container_align" style="background-image: linear-gradient(270deg, rgba(0, 171, 215, 0) 0%,rgba(0, 171, 215, 0.2) 60%, #000000 100%);">
-        <p>O nas</p>
+        <p>Praca</p>
     </div>
 </div>
 <section>

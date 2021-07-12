@@ -27,6 +27,15 @@ body {
 .mob_show {
   display: none !important;
 }
+.smd_show_g {
+  display: none !important;
+}
+.tab_show_g {
+  display: none !important;
+}
+.mob_show_g {
+  display: none !important;
+}
 p.card_name {
   font-weight: 500;
   font-style: normal;
@@ -384,6 +393,9 @@ a.blank {
   .smd_show {
     display: flex !important;
   }
+  .smd_show_g {
+    display: grid !important;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -400,6 +412,9 @@ a.blank {
   }
   .tab_show {
     display: flex !important;
+  }
+  .tab_show_g {
+    display: grid !important;
   }
   .tab_center {
     justify-content: center;
@@ -514,6 +529,9 @@ a.blank {
 
   .mob_show {
     display: flex !important;
+  }
+  .mob_show_g {
+    display: grid !important;
   }
   .main-header__navbar {
     position: fixed;
