@@ -50,17 +50,17 @@
                 </a>
             </div>
             <div class="item_container" style="height:65px;">
-                <a class="blank" href="<?= base_url(); ?>">
+                <a class="blank" href="<?= base_url('oferty'); ?>">
                     <p style="font-size:20px;">Oferta</p>
                 </a>
             </div>
             <div class="item_container" style="height:65px;">
-                <a class="blank" href="<?= base_url(); ?>">
+                <a class="blank" href="<?= base_url('realizacje'); ?>">
                     <p style="font-size:20px;">Realizacje</p>
                 </a>
             </div>
         </div>
-        <div class=" item_container_center size-3 tab_size-12">
+        <div class="box_flex flex_mob flex_align_c size-3 tab_size-12">
             <i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/fb.svg"></i>
             <i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/tw.svg"></i>
             <i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/vi.svg"></i>
@@ -69,7 +69,7 @@
         </div>
     </div>
     <div class="box_flex main_padding copyright">
-        <p style="width:50%">Copyrightⓒ by ms team 2021</p>
+        <p style="width:50%">Copyright by ms team 2021</p>
         <p style="width:50%;text-align:right;">Created with love by AD Awards</p>
     </div>
 </footer>

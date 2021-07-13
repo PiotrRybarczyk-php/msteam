@@ -67,6 +67,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="item_container_center tab_show my-4">
+                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                    </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
                             <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_10.jpg);">
@@ -75,6 +78,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="item_container_center tab_show my-4">
+                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
@@ -86,10 +92,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="item_container_center tab_show my-4">
+                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                    </div>
                 </div>
-                <div class="grid-3 gtab-1 mt-5">
-                    <div></div>
-                    <div></div>
+                <div class="grid-3 gtab-1 mt-5 tab_hide">
+                    <div class="item_container_center">
+                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                    </div>
+                    <div class="item_container_center">
+                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                    </div>
                     <div class="item_container_center">
                         <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
@@ -210,8 +223,8 @@
                 </div>
             </div>
             <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
-                <div class="box_flex flex_mob small_padding">
-                    <div class="grid-1" style="max-width:640px;">
+                <div class="box_flex flex_mob_l small_padding">
+                    <div class="grid-1" style="max-width:520px;">
                         <div class="box_flex">
                             <p class="second_header">NOWE PRZEPISY DLA BRANŻY INSTALATORSKIEJ</p>
                         </div>
@@ -219,7 +232,7 @@
                         <div class="box_flex flex_mob tab_hide"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
                     </div>
                 </div>
-                <div class="box_flex flex_mob" style="min-height:500px;">
+                <div class="box_flex flex_mob_l" style="min-height:500px;">
                     <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_6.jpg)"></div>
                 </div>
                 <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
@@ -253,7 +266,7 @@
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_10.jpg);height:21vw;">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_13.jpg);height:21vw;">
                                 <div class="img_overlay">
                                     <div class="item_container">
                                         <p class="small_content" style="text-transform:lowercase;">Modernizacja oświetlenia drogowego</p>
@@ -266,7 +279,7 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_5.jpg);height:21vw;">
+                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_11.jpg);height:21vw;">
                                 <div class="img_overlay">
                                     <div class="item_container">
                                         <p class="small_content" style="text-transform:lowercase;">Montaż instalacji PhotoVoltaicznej na stadionie piłkarskim</p>

@@ -354,6 +354,9 @@ a.blank {
 .flex_r {
   justify-content: flex-end;
 }
+.flex_align_c {
+  align-items: center;
+}
 /*content aligned to right but in tablet and phone is aligned to center*/
 .flex_mob {
   justify-content: flex-end;

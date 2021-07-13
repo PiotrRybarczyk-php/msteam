@@ -7,7 +7,9 @@ $route['translate_uri_dashes'] = TRUE;
 
 
 $route['onas'] = 'home/about';
-$route['realizacje'] = 'home/offers';
+$route['oferty'] = 'home/offers';
+$route['oferta/(.*)/(.+)'] = 'home/single_offer/$1/$2';
+$route['realizacje'] = 'home/reals';
 $route['projekty'] = 'home/projects';
 $route['praca'] = 'home/work';
 $route['kontakt'] = 'home/contact';
