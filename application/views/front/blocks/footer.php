@@ -31,7 +31,7 @@
             </div>
             <div class="item_container" style="height:65px;">
                 <a class="blank" href="<?= base_url('kontakt'); ?>">
-                    <p style="font-size:20px;">Kontakt</p>
+                    <p style="font-size:20px;"><?= $subpages[4]->title; ?></p>
                 </a>
             </div>
         </div>
@@ -41,12 +41,12 @@
             </div>
             <div class="item_container" style="height:65px;">
                 <a class="blank" href="<?= base_url('aktualnosci'); ?>">
-                    <p style="font-size:20px;">Aktualności</p>
+                    <p style="font-size:20px;"><?= $subpages[5]->title; ?></p>
                 </a>
             </div>
             <div class="item_container" style="height:65px;">
                 <a class="blank" href="<?= base_url('praca'); ?>">
-                    <p style="font-size:20px;">Praca</p>
+                    <p style="font-size:20px;"><?= $subpages[3]->title; ?></p>
                 </a>
             </div>
             <div class="item_container" style="height:65px;">
@@ -56,7 +56,7 @@
             </div>
             <div class="item_container" style="height:65px;">
                 <a class="blank" href="<?= base_url('realizacje'); ?>">
-                    <p style="font-size:20px;">Realizacje</p>
+                    <p style="font-size:20px;"><?= $subpages[2]->title; ?></p>
                 </a>
             </div>
         </div>

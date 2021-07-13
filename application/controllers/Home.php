@@ -20,6 +20,8 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		$data['slider'] = $this->back_m->get_all('slider');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('index', $data);
 	}

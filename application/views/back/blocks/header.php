@@ -56,15 +56,6 @@
       <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_4" class="nav-link <?php if ($this->uri->segment(2) == 'info_4' || $this->uri->segment(3) == 'info_4') {
                                                                                               echo 'active';
                                                                                             } ?>">Sekcja 4</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/products_page" class="nav-link <?php if ($this->uri->segment(2) == 'products_page' || $this->uri->segment(3) == 'products_page') {
-                                                                                                    echo 'active';
-                                                                                                  } ?>">Produkty</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/products_info" class="nav-link <?php if ($this->uri->segment(2) == 'products_info' || $this->uri->segment(3) == 'products_info') {
-                                                                                                    echo 'active';
-                                                                                                  } ?>">Kafle Produktów</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/opinions" class="nav-link <?php if ($this->uri->segment(2) == 'opinions' || $this->uri->segment(3) == 'opinions') {
-                                                                                                echo 'active';
-                                                                                              } ?>">Opinie</a></li>
     </ul>
     <a href="<?php echo base_url(); ?>panel/blog" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'blog') {
@@ -72,34 +63,7 @@
         } ?>">
       <div class="br-menu-item">
         <i class="menu-item-icon icon fas fa-blog tx-20"></i>
-        <span class="menu-item-label">Poradnik</span>
-      </div><!-- menu-item -->
-    </a><!-- br-menu-link -->
-    <a href="#" class="br-menu-link
-        <?php if ($this->uri->segment(2) == 'partners' || $this->uri->segment(2) == 'atributes') {
-          echo 'active';
-        } ?>">
-      <div class="br-menu-item">
-        <i class="menu-item-icon far fa-caret-square-down tx-20"></i>
-        <span class="menu-item-label">Certyfikaty</span>
-        <i class="menu-item-arrow fa fa-angle-down"></i>
-      </div><!-- menu-item -->
-    </a><!-- br-menu-link -->
-    <ul class="br-menu-sub nav flex-column">
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/certificates_new" class="nav-link <?php if ($this->uri->segment(2) == 'certificates_new' || $this->uri->segment(3) == 'certificates_new') {
-                                                                                                        echo 'active';
-                                                                                                      } ?>">Certyfikaty Aktualne</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/certificates_old" class="nav-link <?php if ($this->uri->segment(2) == 'certificates_old' || $this->uri->segment(3) == 'certificates_old') {
-                                                                                                        echo 'active';
-                                                                                                      } ?>">Certyfikaty Archiwalne</a></li>
-    </ul>
-    <a href="<?php echo base_url(); ?>panel/distribs" class="br-menu-link
-        <?php if ($this->uri->segment(2) == 'distribs') {
-          echo 'active';
-        } ?>">
-      <div class="br-menu-item">
-        <i class="menu-item-icon icon fas fa-folder-open tx-20"></i>
-        <span class="menu-item-label">Dystrybutorzy</span>
+        <span class="menu-item-label">Aktualnosći</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/mails" class="br-menu-link

@@ -1,38 +1,26 @@
+        <?php $c = 0; ?>
         <section>
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <?php foreach ($slider as $slide) : ?>
+                        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="<?= $c; ?>" class="<?php if ($c == 0) echo 'active'; ?>" aria-current="true" aria-label="Slide <?= $c + 1; ?>"></button>
+                        <?php $c++; ?>
+                    <?php endforeach; ?>
+                    <?php $c = 0; ?>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png);">
-                            <div class="carousel-content d-md-block">
-                                <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
-                                <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
-                                <a href="#">USŁUGI</a>
+                    <?php foreach ($slider as $slide) : ?>
+                        <?php $c++; ?>
+                        <div class="carousel-item <?php if ($c == 1) echo 'active'; ?>">
+                            <div class="carousel-photo" style="background-image: url(<?= base_url('uploads/') . $slide->photo; ?>">
+                                <div class="carousel-content d-md-block">
+                                    <h1><?= $slide->title; ?></h1>
+                                    <div><?= $slide->subtitle; ?></div>
+                                    <a href="<?= base_url() . $slide->link; ?>"><?= $slide->button; ?></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png);">
-                            <div class="carousel-content d-md-block">
-                                <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
-                                <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
-                                <a href="#">LOREM IPSUM</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/slider/slider-photo.png);">
-                            <div class="carousel-content d-md-block">
-                                <h1>Z NAMI ZREALIZUJESZ SZYBKO, SPRAWNIE, SKUTECZNIE</h1>
-                                <div>SPECJALISTYCZNE USŁUGI INSTALACJI ELEKTRYCZNYCH</div>
-                                <a href="#">Zobacz Więcej</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
