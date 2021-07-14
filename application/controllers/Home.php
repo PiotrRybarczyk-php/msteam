@@ -20,56 +20,90 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$data = loadDefaultDataFront();
-		$data['logo'] = $this->back_m->get_all('logos');
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['slider'] = $this->back_m->get_all('slider');
+		$data['info'] = $this->back_m->get_all('info');
+		$data['offer'] = $this->back_m->get_all('services');
+		$data['work'] = $this->back_m->get_all('work');
+		$data['tile'] = $this->back_m->get_all('tiles');
+		$data['update'] = $this->back_m->get_all('blog');
+		$data['project'] = $this->back_m->get_all('main_projects');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('index', $data);
 	}
 	public function offers()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 3);
+		$data['service'] = $this->back_m->get_all('services');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('offers', $data);
 	}
-	public function single_offer($id, $slug)
+	public function offer_1()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 8);
+		$data['cp'] = $this->uri->segment(1);
+		echo loadViewsFront('single_offer', $data);
+	}
+	public function offer_2()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['cp'] = $this->uri->segment(1);
+		echo loadViewsFront('single_offer', $data);
+	}
+	public function offer_3()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('single_offer', $data);
 	}
 	public function reals()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('reals', $data);
 	}
 	public function work()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('work', $data);
 	}
 	public function blog()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('blog', $data);
 	}
 	public function single_article($id, $slug)
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('single_article', $data);
 	}
 	public function about()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 2);
+		$data['update'] = $this->back_m->get_all('blog');
+		$data['about'] = $this->back_m->get_one('aboutus', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('about', $data);
 	}
 	public function contact()
 	{
 		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('contact', $data);
 	}

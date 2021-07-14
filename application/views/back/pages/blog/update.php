@@ -40,15 +40,6 @@
                             </div><!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
-                            <!-- set -->
-                            <div class="col-md-12 pr-0">
-                                <div class="form-group bd-t-1-force bd-b-0-force bd-r-0-force">
-                                    <label class="form-control-label">Opis:</label>
-                                    <textarea class="summernote" name="description2"><?php echo $value->description2; ?></textarea>
-                                </div>
-                            </div><!-- col-4 -->
-                        </div> <!-- set -->
-                        <div class="row">
                             <div class="col-md-12 pr-0">
                                 <div class="form-layout-footer bd pd-20 bd-r-0-force">
                                     <button class="btn btn-info" type="submit">Zapisz</button>
@@ -69,7 +60,7 @@
                         </div><!-- col-12 -->
                         <div class="col-md-12">
                             <div class="form-group bd-t-0-force bd-l-1-force">
-                                <label class="form-control-label">Zdjęcie:</label>
+                                <label class="form-control-label">Zdjęcie Główne:</label>
                                 <input type="hidden" id="name_photo_1" name="name_photo_1">
                                 <button type="button" class="btn btn-info white w-100" onclick="openModal(1);">Dodaj</button>
                             </div>
@@ -91,7 +82,7 @@
                         </div><!-- col-12 -->
                         <div class="col-md-12">
                             <div class="form-group bd-t-0-force bd-l-1-force">
-                                <label class="form-control-label">Zdjęcie w tle:</label>
+                                <label class="form-control-label">Zdjęcie:</label>
                                 <input type="hidden" id="name_photo_2" name="name_photo_2">
                                 <button type="button" class="btn btn-info white w-100" onclick="openModal(2);">Dodaj</button>
                             </div>

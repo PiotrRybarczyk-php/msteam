@@ -23,20 +23,54 @@
                                     <input class="form-control" type="text" name="title" value="<?php echo $value->title; ?>" required>
                                 </div>
                             </div><!-- col-4 -->
-                            <div class="col-md-12 pr-0">
-                                <div class="form-group bd-t-0-force">
-                                    <label class="form-control-label">Link: <span class="tx-danger">*</span></label>
-                                    <input class="form-control" type="text" name="link" value="<?php echo $value->link; ?>" required>
-                                </div>
-                            </div><!-- col-4 -->
-                            <?php if ($value->has_button == 1) : ?>
+                            <?php if ($value->subtitle != "ommit") : ?>
+                                <div class="col-md-12 pr-0">
+                                    <div class="form-group">
+                                        <label class="form-control-label">PodTytuł: <span class="tx-danger">*</span></label>
+                                        <input class="form-control" type="text" name="subtitle" value="<?php echo $value->subtitle; ?>" required>
+                                    </div>
+                                </div><!-- col-4 -->
+                            <?php endif; ?>
+                            <?php if ($value->link != "ommit") : ?>
+                                <div class="col-md-12 pr-0">
+                                    <div class="form-group bd-t-0-force">
+                                        <label class="form-control-label">Link: <span class="tx-danger">*</span></label>
+                                        <input class="form-control" type="text" name="link" value="<?php echo $value->link; ?>" required>
+                                    </div>
+                                </div><!-- col-4 -->
+                            <?php endif; ?>
+                            <?php if ($value->button != "ommit") : ?>
                                 <div class="col-md-12 pr-0">
                                     <div class="form-group bd-t-0-force">
                                         <label class="form-control-label">Przycisk: <span class="tx-danger">*</span></label>
                                         <input class="form-control" type="text" name="button" value="<?php echo $value->button; ?>" required>
                                     </div>
                                 </div><!-- col-4 -->
-                            <?php endif ?>
+                            <?php endif; ?>
+                            <?php if ($value->work_link != "ommit") : ?>
+                                <div class="col-md-12 pr-0">
+                                    <div class="form-group bd-t-0-force">
+                                        <label for="work" class="form-control-label">Wybierz Ofertę Pracy: <span class="tx-danger">*</span></label>
+                                        <select class="form-control" id="work" name="work_link">
+                                            <?php foreach ($work as $element) : ?>
+                                                <option <?php if ($value->work_link == $element->title) echo 'selected'; ?> value="<?= $element->title; ?>"><?= $element->title; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div><!-- col-4 -->
+                            <?php endif; ?>
+                            <?php if ($value->update_link != "ommit") : ?>
+                                <div class="col-md-12 pr-0">
+                                    <div class="form-group bd-t-0-force">
+                                        <label for="update" class="form-control-label">Wybierz Aktualność na Stronie Głównej: <span class="tx-danger">*</span></label>
+                                        <select class="form-control" id="update" name="update_link">
+                                            <?php foreach ($update as $element) : ?>
+                                                <option <?php if ($value->update_link == $element->title) echo 'selected'; ?> value="<?= $element->title; ?>"><?= $element->title; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div><!-- col-4 -->
+                            <?php endif; ?>
                         </div> <!-- set -->
                         <div class="row">
                             <!-- set -->
@@ -47,19 +81,7 @@
                                         <textarea class="summernote" name="description"><?php echo $value->description; ?></textarea>
                                     </div>
                                 </div>
-                            <?php endif ?>
-                            <!-- col-4 -->
-                        </div> <!-- set -->
-                        <div class="row">
-                            <!-- set -->
-                            <?php if ($value->description_2 != "ommit") : ?>
-                                <div class="col-md-10 pr-0">
-                                    <div class="form-group bd-t-0-force bd-b-0-force">
-                                        <label class="form-control-label">Krótki opis działu:</label>
-                                        <textarea style="width:100%;" name="description_2" rows="7" cols="55" maxlength="400"><?php echo $value->description_2; ?></textarea>
-                                    </div>
-                                </div>
-                            <?php endif ?>
+                            <?php endif; ?>
                             <!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
@@ -71,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ($value->has_photo == 1) : ?>
+                    <?php if ($value->photo != "ommit") : ?>
                         <div class="col-md-4">
                             <div class="col-md-12">
                                 <div id="photoViewer_1" class="form-group bd-l-0-force text-center delete_photo cursor" onclick="clear_box(1);">
@@ -96,7 +118,7 @@
                                 </div>
                             </div><!-- col-12 -->
                         </div>
+                    <?php endif; ?>
                 </div><!-- row -->
                 <?php $this->load->view('back/forms/double_modal'); ?>
-            <?php endif ?>
             </form><!-- form-layout -->

@@ -1,4 +1,28 @@
-        <?php $c = 0; ?>
+        <?php
+        $c = 0;
+        $work_title = "";
+        $work_desc = "";
+        $work_photo = "";
+        $blog_id = 0;
+        $blog_title = "";
+        $blog_desc = "";
+        $blog_photo = "";
+        foreach ($work as $work_item) {
+            if ($work_item->title == $info[3]->work_link) {
+                $work_title = $work_item->title;
+                $work_desc = $work_item->description;
+                $work_photo = $work_item->photo;
+            }
+        }
+        foreach ($update as $blog_item) {
+            if ($blog_item->title == $info[4]->update_link) {
+                $blog_title = $blog_item->title;
+                $blog_desc = $blog_item->description;
+                $blog_photo = $blog_item->photo;
+                $blog_id = $blog_item->id;
+            }
+        }
+        ?>
         <section>
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -36,11 +60,11 @@
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">tak działamy</div>
+                    <div class="header-title"><?= $info[0]->title; ?></div>
                     <div class="separator-line"></div>
                 </div>
                 <div class="content-section">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus odio ut arcu euismod consectetur. Etiam fermentum enim sit amet dolor consequat efficitur. Pellentesque feugiat odio quis placerat rutrum. Aenean et tincidunt massa. Duis accumsan, odio eu vestibulum pharetra, nisi augue pulvinar ipsum, congue hendrerit nisi turpis vehicula diam. Phasellus posuere eleifend diam in malesuada. Donec euismod nunc sed dignissim bibendum. Integer id justo in erat pharetra venenatis viverra ac elit. Praesent sodales augue sed placerat commodo. Sed nec dictum ante. Nulla in lobortis risus lectus.
+                    <?= textlim($info[0]->description, 600); ?>
                 </div>
             </div>
             <div class="grid-1 main_padding">
@@ -48,9 +72,9 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_2.jpg);">
+                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[1]->photo; ?>);">
                                 <div class="img_overlay">
-                                    <p>Sieci i Instalacje Elektryczne</p>
+                                    <p><?= $offer[1]->title; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -60,9 +84,9 @@
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_10.jpg);">
+                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[2]->photo; ?>);">
                                 <div class="img_overlay">
-                                    <p>Fotowoltaika</p>
+                                    <p><?= $offer[2]->title; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -73,9 +97,9 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_5.jpg);">
+                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[3]->photo; ?>);">
                                 <div class="img_overlay">
-                                    <p>Roboty Ziemne</p>
+                                    <p><?= $offer[3]->title; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +125,7 @@
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">JESTEŚMY RENOMOWANYM WYKONAWCĄ INSTALACJI ELEKTRYCZNYCH</div>
+                    <div class="header-title"><?= $info[1]->title; ?></div>
                     <div class="separator-line"></div>
                 </div>
             </div>
@@ -109,64 +133,63 @@
                 <div class="item_container">
                     <div class="inner_container_1 small_padding">
                         <div class="absolute_el tab_hide" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur scelerisque posuere. Pellentesque ultrices semper velit nec cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed et porttitor nibh, eget porta sapien. Pellentesque elementum dolor risus, varius pellentesque odio volutpat id. Ut nec elit et enim imperdiet tempus id nec ipsum. Suspendisse velit ex, lacinia sit amet feugiat ac, gravida eget dui. Nunc faucibus condimentum magna sed luctus. Nullam luctus quam metus, eu accumsan lectus fermentum et. Nam ac varius enim, ut porttitor leo. Curabitur imperdiet diam non mattis feugiat.</p>
-                        <p>Vivamus nec nisl eros. Ut pellentesque nulla feugiat metus rutrum, vitae vestibulum felis faucibus. Morbi nec magna non nisl ornare lobortis. Nunc tortor sapien, dignissim at congue ac, feugiat id nunc. Aenean at augue et diam ultrices congue. Donec viverra erat malesuada massa sollicitudin mollis. Donec interdum ullamcorper tellus, ac pulvinar diam varius varius nulla.V</p>
-                        <div class="item_flex flex_r tab_hide"><a class="blank" href="#"><button class="btn_JS">Poznaj Nas</button></a></div>
+                        <?= textlim($info[1]->description, 1000); ?>
+                        <div class="item_flex flex_r tab_hide"><a class="blank" href="<?= $info[1]->link; ?>"><button class="btn_JS"><?= $info[1]->button; ?></button></a></div>
                     </div>
                 </div>
                 <div class="item_container_align small_padding">
-                    <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_7.jpg);"></div>
+                    <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $info[1]->photo;  ?>);"></div>
                 </div>
-                <div class="item_container_center tab_show mt-5"><a class="blank" href="#"><button class="btn_JS">Poznaj Nas</button></a></div>
+                <div class="item_container_center tab_show mt-5"><a class="blank" href="<?= $info[1]->link; ?>"><button class="btn_JS"><?= $info[1]->button; ?></button></a></div>
             </div>
         </section>
         <section>
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">FACHOWI I KOMPETENTNI</div>
+                    <div class="header-title"><?= $info[2]->title; ?></div>
                     <div class="separator-line"></div>
                 </div>
                 <div class="content-section">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus odio ut arcu euismod consectetur. Etiam fermentum enim sit amet dolor consequat efficitur. Pellentesque feugiat odio quis placerat rutrum. Aenean et tincidunt massa. Duis accumsan, odio eu vestibulum pharetra, nisi augue pulvinar ipsum, congue hendrerit nisi turpis vehicula diam. Phasellus posuere eleifend diam in malesuada. Donec euismod nunc sed dignissim bibendum. Integer id justo in erat pharetra venenatis viverra ac elit. Praesent sodales augue sed placerat commodo. Sed nec dictum ante. Nulla in lobortis risus lectus.
+                    <?= $info[2]->description; ?>
                 </div>
             </div>
             <div class="box_center main_padding">
                 <div class="grid-4 gtab-2 gmob-1">
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/quality.svg"></span></div>
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[0]->photo; ?>"></span></div>
                         <div class="item_container_center">
-                            <p class="tile_header">SYSTEM ZARZĄDZANIA JAKOŚCIĄ</p>
+                            <p class="tile_header"><?= $tile[0]->title; ?></p>
                         </div>
                         <div class="item_container_center">
-                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
-                        </div>
-                    </div>
-                    <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/permission.svg"></span></div>
-                        <div class="item_container_center">
-                            <p class="tile_header">Uprawnienia</p>
-                        </div>
-                        <div class="item_container_center">
-                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                            <div class="tile_content"><?= textlim($tile[0]->description, 500); ?></div>
                         </div>
                     </div>
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/permission.svg"></span></div>
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[1]->photo; ?>"></span></div>
                         <div class="item_container_center">
-                            <p class="tile_header">Uprawnienia</p>
+                            <p class="tile_header"><?= $tile[1]->title; ?></p>
                         </div>
                         <div class="item_container_center">
-                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                            <div class="tile_content"><?= textlim($tile[1]->description, 500); ?></div>
                         </div>
                     </div>
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url(); ?>assets/front/icons/certificate.svg"></span></div>
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[2]->photo; ?>"></span></div>
                         <div class="item_container_center">
-                            <p class="tile_header">CERTYFIKAT JAKOŚCI</p>
+                            <p class="tile_header"><?= $tile[2]->title; ?></p>
                         </div>
                         <div class="item_container_center">
-                            <p class="tile_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis elit vitae nisi finibus commodo. Donec in elit venenatis, lacinia orci id, tempus neque. Cras molestie mauris non dignissim ultrices. Etiam et turpis eu mauris varius elementum. Aliquam at arcu id massa malesuada laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas convallis nisi sed nibh egestas, a eleifend lacus gravida. Cras gravida fringilla metus, et pharetra risus sit.</p>
+                            <div class="tile_content"><?= textlim($tile[2]->description, 500); ?></div>
+                        </div>
+                    </div>
+                    <div class="item_container small_padding">
+                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[3]->photo; ?>"></span></div>
+                        <div class="item_container_center">
+                            <p class="tile_header"><?= $tile[3]->title; ?></p>
+                        </div>
+                        <div class="item_container_center">
+                            <div class="tile_content"><?= textlim($tile[3]->description, 500); ?></div>
                         </div>
                     </div>
                 </div>
@@ -176,24 +199,26 @@
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">DO NASZYCH EKIP POSZUKUJEMY</div>
+                    <div class="header-title"><?= $info[3]->title; ?></div>
                     <div class="separator-line"></div>
                 </div>
             </div>
             <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
                 <div class="box_flex flex_mob" style="min-height:500px;">
-                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_9.jpg)"></div>
+                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $work_photo; ?>)"></div>
                 </div>
                 <div class="box_flex flex_mob small_padding">
                     <div class="grid-1" style="max-width:640px;">
                         <div class="box_flex">
                             <div class="absolute_el" style="top:70px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
-                            <p class="second_header">STANOWISKO</p>
+                            <p class="second_header"><?= $work_title; ?></p>
                         </div>
-                        <p class="content_with_padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in sodales tellus, quis egestas lorem. Quisque sit amet risus suscipit, aliquam enim ac, rhoncus diam. In faucibus nibh sed sem efficitur, in dapibus sapien venenatis. Sed odio ante, maximus nec nisi ac, dapibus aliquam nibh. Duis consequat luctus felis vitae hendrerit. Nam mattis ultricies fermentum. Nullam ullamcorper elit proin.</p>
+                        <div class="content_with_padding">
+                            <?= textlim($work_desc, 400); ?>
+                        </div>
                         <div class="grid-2 gmob-1" style="max-width:504px;">
-                            <div class="item_container_center mb-1"><a class="blank" href="#"><button class="btn_static">Kontakt</button></a></div>
-                            <div class="item_container_center mb-1"><a class="blank" href="#"><button class="btn_static">Zobacz Więcej Ofert</button></a></div>
+                            <div class="item_container_center mb-1"><a class="blank" href="kontakt"><button class="btn_static">Kontakt</button></a></div>
+                            <div class="item_container_center mb-1"><a class="blank" href="praca"><button class="btn_static">Zobacz Więcej Ofert</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -203,38 +228,40 @@
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">AKTUALNOŚCI</div>
+                    <div class="header-title"><?= $info[4]->title; ?></div>
                     <div class="separator-line"></div>
                 </div>
                 <div class="content-section" style="text-align:center;">
-                    W naszej zakładce przeczytasz o aktualnościach w branży o realizacjach i doświadczeniach oraz o naszej obecności w środowisku lokalnym
+                    <?= $info[4]->subtitle; ?>
                 </div>
             </div>
             <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
                 <div class="box_flex flex_mob_l small_padding">
                     <div class="grid-1" style="max-width:520px;">
                         <div class="box_flex">
-                            <p class="second_header">NOWE PRZEPISY DLA BRANŻY INSTALATORSKIEJ</p>
+                            <p class="second_header"><?= $blog_title; ?></p>
                         </div>
-                        <p class="content_with_padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in sodales tellus, quis egestas lorem. Quisque sit amet risus suscipit, aliquam enim ac, rhoncus diam. In faucibus nibh sed sem efficitur, in dapibus sapien venenatis. Sed odio ante, maximus nec nisi ac, dapibus aliquam nibh. Duis consequat luctus felis vitae hendrerit. Nam mattis ultricies fermentum. Nullam ullamcorper elit proin.</p>
-                        <div class="box_flex flex_mob tab_hide"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
+                        <div class="content_with_padding">
+                            <?= textlim($blog_desc, 400); ?>
+                        </div>
+                        <div class="box_flex flex_mob tab_hide"><a class="blank" href="wpis/<?= $blog_id; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
                     </div>
                 </div>
                 <div class="box_flex flex_mob_l" style="min-height:500px;">
-                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url(); ?>assets/front/img/ms_photo_6.jpg)"></div>
+                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $blog_photo; ?>)"></div>
                 </div>
-                <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
+                <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="wpis/<?= $blog_id; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
             </div>
         </section>
         <section style="margin-bottom:140px">
             <div class="container">
                 <div class="header-section">
                     <div class="separator-line"></div>
-                    <div class="header-title">WSPÓŁPRACOWALI Z NAMI</div>
+                    <div class="header-title"><?= $info[5]->title; ?></div>
                     <div class="separator-line"></div>
                 </div>
                 <div class="content-section" style="text-align:center;">
-                    Istniejemy na rynku od 1992 roku. W tym czasie wykonaliśmy naprawdę wiele realizacji. Zobacz nasze projekty i kontrahentów
+                    <?= $info[5]->subtitle; ?>
                 </div>
             </div>
             <div class="grid-1 main_padding">
@@ -242,45 +269,45 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_2.jpg);height:21vw;">
-                                <div class="img_overlay">
+                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $project[0]->photo; ?>);height:21vw;">
+                                <a href="<?= $project[0]->link; ?>" class="blank img_overlay">
                                     <div class="item_container">
-                                        <p class="small_content" style="text-transform:lowercase;">Wykonanie instalacji elektrycznej na terenie</p>
-                                        <p class="inner_header">KGHM GŁOGÓW</p>
+                                        <p class="small_content" style="text-transform:lowercase;"><?= $project[0]->subtitle; ?></p>
+                                        <p class="inner_header"><?= $project[0]->title; ?></p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_13.jpg);height:21vw;">
-                                <div class="img_overlay">
+                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $project[1]->photo; ?>);height:21vw;">
+                                <a href="<?= $project[1]->link; ?>" class="blank img_overlay">
                                     <div class="item_container">
-                                        <p class="small_content" style="text-transform:lowercase;">Modernizacja oświetlenia drogowego</p>
-                                        <p class="inner_header">Miasto Jawor</p>
+                                        <p class="small_content" style="text-transform:lowercase;"><?= $project[1]->subtitle; ?></p>
+                                        <p class="inner_header"><?= $project[1]->title; ?></p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url(); ?>assets/front/img/ms_photo_11.jpg);height:21vw;">
-                                <div class="img_overlay">
+                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $project[2]->photo; ?>);height:21vw;">
+                                <a href="<?= $project[2]->link; ?>" class="blank img_overlay">
                                     <div class="item_container">
-                                        <p class="small_content" style="text-transform:lowercase;">Montaż instalacji PhotoVoltaicznej na stadionie piłkarskim</p>
-                                        <p class="inner_header">FC Ingolstadt 04</p>
+                                        <p class="small_content" style="text-transform:lowercase;"><?= $project[2]->subtitle; ?></p>
+                                        <p class="inner_header"><?= $project[2]->title; ?></p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="grid-1">
                     <div class="item_container_center">
-                        <a class="blank" href="#"><button class="btn_JS">ZOBACZ INNE REALIZACJE</button></a>
+                        <a class="blank" href="<?= $info[5]->link; ?>"><button class="btn_JS"><?= $info[5]->button; ?></button></a>
                     </div>
                 </div>
             </div>

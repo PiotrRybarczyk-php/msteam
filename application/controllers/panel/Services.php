@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Info_4 extends CI_Controller
+class Services extends CI_Controller
 {
 
 	public function index()
 	{
 		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {
-			if (!$this->db->table_exists('info')) {
-				$this->base_m->create_table('info');
+			if (!$this->db->table_exists($this->uri->segment(2))) {
+				$this->base_m->create_table($this->uri->segment(2));
 			}
 			// DEFAULT DATA
 			$data = loadDefaultData();
 
-			$data['rows'] = $this->back_m->get_one('info', 4);
+			$data['rows'] = $this->back_m->get_all($this->uri->segment(2));
 			echo loadSubViewsBack($this->uri->segment(2), 'index', $data);
 		} else {
 			redirect('panel');
@@ -27,7 +27,7 @@ class Info_4 extends CI_Controller
 			$data = loadDefaultData();
 
 			if ($id != '') {
-				$data['value'] = $this->back_m->get_one('info', $id);
+				$data['value'] = $this->back_m->get_one($this->uri->segment(2), $id);
 			}
 			echo loadSubViewsBack($this->uri->segment(2), $type, $data);
 		} else {
@@ -93,7 +93,7 @@ class Info_4 extends CI_Controller
 				$this->back_m->update($table, $insert, $id);
 				$this->session->set_flashdata('flashdata', 'Rekord został zaktualizowany!');
 			}
-			redirect('panel/' . 'info_4');
+			redirect('panel/' . $table);
 		} else {
 			redirect('panel');
 		}

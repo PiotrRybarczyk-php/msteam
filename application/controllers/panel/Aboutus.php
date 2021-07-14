@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Atributes extends CI_Controller
+class Aboutus extends CI_Controller
 {
 
 	public function index()
@@ -28,6 +28,7 @@ class Atributes extends CI_Controller
 
 			if ($id != '') {
 				$data['value'] = $this->back_m->get_one($this->uri->segment(2), $id);
+				$data['update'] = $this->back_m->get_all('blog');
 			}
 			echo loadSubViewsBack($this->uri->segment(2), $type, $data);
 		} else {

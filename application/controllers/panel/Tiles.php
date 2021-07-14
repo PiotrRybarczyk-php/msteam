@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Media extends CI_Controller
+class Tiles extends CI_Controller
 {
 
 	public function index()
@@ -56,19 +56,31 @@ class Media extends CI_Controller
 					$this->base_m->create_column($table, $key);
 				}
 
-
-				if ($key == 'name_file_1') {
-					if ($this->upload->do_upload('file_1')) {
+				if ($key == 'name_photo_1') {
+					if ($this->upload->do_upload('photo_1')) {
 						$data = $this->upload->data();
-						$insert['name'] = $data['file_name'];
-						$insert['raw_name'] = $data['raw_name'];
-						$insert['type'] = $data['file_type'];
-						$insert['size'] = $data['file_size'];
-						$insert['full_path'] = $data['full_path'];
-						$insert['file_path'] = $data['file_path'];
-						if (substr($data['file_type'], 0, 5) == 'image') {
-							$insert['is_photo'] = 1;
-						} else $insert['is_photo'] = 0;
+						$insert['photo'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+
+						addMedia($data);
+					} elseif ($value == 'usunięte') {
+						$insert['photo'] = '';
+					}
+				} else if ($key == 'server_photo_1') {
+					if ($value != '') {
+						$insert['photo'] = $value;
+					}
+					if ($value == 'usunięte') {
+						$insert['photo'] = '';
+					}
+				} else if ($key == 'server_photo_2') {
+					if ($value != '') {
+						$insert['photo2'] = $value;
+					}
+					if ($value == 'usunięte') {
+						$insert['photo2'] = '';
 					}
 				} else {
 					$insert[$key] = $value;

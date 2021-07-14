@@ -13,7 +13,7 @@ function textlim($text, $size)
         $new_size = $new_size + (strlen($occur[$i]) * $number_of[$i]);
     }
     $lenght = strlen($new_text);
-    if ($lenght > $size) {
+    if ($lenght > $size + 4) {
         $text = substr($text, 0, $new_size) . '...' . '</p>';
     }
     return $text;

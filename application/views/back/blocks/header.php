@@ -44,18 +44,15 @@
       <li class="nav-item"><a href="<?php echo base_url(); ?>panel/slider" class="nav-link <?php if ($this->uri->segment(2) == 'slider' || $this->uri->segment(3) == 'slider') {
                                                                                               echo 'active';
                                                                                             } ?>">Slajder</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_3" class="nav-link <?php if ($this->uri->segment(2) == 'info_3' || $this->uri->segment(3) == 'info_3') {
-                                                                                              echo 'active';
-                                                                                            } ?>">Sekcja 1</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_1" class="nav-link <?php if ($this->uri->segment(2) == 'info_1' || $this->uri->segment(3) == 'info_1') {
-                                                                                              echo 'active';
-                                                                                            } ?>">Sekcja 2</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_2" class="nav-link <?php if ($this->uri->segment(2) == 'info_2' || $this->uri->segment(3) == 'info_2') {
-                                                                                              echo 'active';
-                                                                                            } ?>">Sekcja 3</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_4" class="nav-link <?php if ($this->uri->segment(2) == 'info_4' || $this->uri->segment(3) == 'info_4') {
-                                                                                              echo 'active';
-                                                                                            } ?>">Sekcja 4</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info" class="nav-link <?php if ($this->uri->segment(2) == 'info' || $this->uri->segment(3) == 'info') {
+                                                                                            echo 'active';
+                                                                                          } ?>">Sekcje</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/tiles" class="nav-link <?php if ($this->uri->segment(2) == 'tiles' || $this->uri->segment(3) == 'tiles') {
+                                                                                            echo 'active';
+                                                                                          } ?>">Kafelki</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/main_projects" class="nav-link <?php if ($this->uri->segment(2) == 'main_projects' || $this->uri->segment(3) == 'main_projects') {
+                                                                                                    echo 'active';
+                                                                                                  } ?>">Realizacje</a></li>
     </ul>
     <a href="<?php echo base_url(); ?>panel/blog" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'blog') {
@@ -64,6 +61,33 @@
       <div class="br-menu-item">
         <i class="menu-item-icon icon fas fa-blog tx-20"></i>
         <span class="menu-item-label">Aktualnosći</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/work" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'work') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <span class="menu-item-label">Oferty Pracy</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/aboutus" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'aboutus') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <span class="menu-item-label">O firmie</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/services" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'services') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <span class="menu-item-label">Z nami Zrealizujesz</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/mails" class="br-menu-link
@@ -253,6 +277,34 @@
         </div>
       </div>
 
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">Adres Odziału:</h6>
+        <div class="pos-relative">
+          <input type="text" id="address2" name="address2" onchange="updateField('address2' , 'contact_settings')" value="<?php echo $contact->address2; ?>" class="form-control form-control-inverse transition pd-y-10">
+        </div>
+      </div>
+
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">NIP:</h6>
+        <div class="pos-relative">
+          <input type="text" id="NIP" name="NIP" onchange="updateField('NIP' , 'contact_settings')" value="<?php echo $contact->NIP; ?>" class="form-control form-control-inverse transition pd-y-10">
+        </div>
+      </div>
+
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">REGON:</h6>
+        <div class="pos-relative">
+          <input type="text" id="REGON" name="REGON" onchange="updateField('REGON' , 'contact_settings')" value="<?php echo $contact->REGON; ?>" class="form-control form-control-inverse transition pd-y-10">
+        </div>
+      </div>
+
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">KRS:</h6>
+        <div class="pos-relative">
+          <input type="text" id="KRS" name="KRS" onchange="updateField('KRS' , 'contact_settings')" value="<?php echo $contact->KRS; ?>" class="form-control form-control-inverse transition pd-y-10">
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-4">
           <div class="pd-y-20 pd-l-25 tx-white">
@@ -290,6 +342,20 @@
               <input type="text" id="phone2" name="phone2" onchange="updateField('phone2' , 'contact_settings')" value="<?php echo $contact->phone2; ?>" class="form-control form-control-inverse transition pd-y-10">
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">Numer Fax:</h6>
+        <div class="pos-relative">
+          <input type="text" id="phone3" name="phone3" onchange="updateField('phone3' , 'contact_settings')" value="<?php echo $contact->phone3; ?>" class="form-control form-control-inverse transition pd-y-10">
+        </div>
+      </div>
+
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">Numer Fax:</h6>
+        <div class="pos-relative">
+          <input type="text" id="phone4" name="phone4" onchange="updateField('phone4' , 'contact_settings')" value="<?php echo $contact->phone4; ?>" class="form-control form-control-inverse transition pd-y-10">
         </div>
       </div>
 

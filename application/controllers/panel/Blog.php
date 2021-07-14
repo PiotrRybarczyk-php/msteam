@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Media extends CI_Controller
+class Blog extends CI_Controller
 {
 
 	public function index()
@@ -43,7 +43,7 @@ class Media extends CI_Controller
 				mkdir('./uploads/' . $now, 0777, TRUE);
 			}
 			$config['upload_path'] = './uploads/' . $now;
-			$config['allowed_types'] = '*';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 			$config['max_size'] = 0;
 			$config['max_width'] = 0;
 			$config['max_height'] = 0;
@@ -56,19 +56,59 @@ class Media extends CI_Controller
 					$this->base_m->create_column($table, $key);
 				}
 
-
-				if ($key == 'name_file_1') {
-					if ($this->upload->do_upload('file_1')) {
+				if ($key == 'name_photo_1') {
+					if ($this->upload->do_upload('photo_1')) {
 						$data = $this->upload->data();
-						$insert['name'] = $data['file_name'];
-						$insert['raw_name'] = $data['raw_name'];
-						$insert['type'] = $data['file_type'];
-						$insert['size'] = $data['file_size'];
-						$insert['full_path'] = $data['full_path'];
-						$insert['file_path'] = $data['file_path'];
-						if (substr($data['file_type'], 0, 5) == 'image') {
-							$insert['is_photo'] = 1;
-						} else $insert['is_photo'] = 0;
+						$insert['photo'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+						addMedia($data);
+					} elseif ($value == 'usunięte') {
+						$insert['photo'] = '';
+					}
+				} else if ($key == 'name_photo_2') {
+					if ($this->upload->do_upload('photo_2')) {
+						$data = $this->upload->data();
+						$insert['photo2'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+						addMedia($data);
+					} elseif ($value == 'usunięte') {
+						$insert['photo2'] = '';
+					}
+				} else if ($key == 'name_photo_3') {
+					if ($this->upload->do_upload('photo_3')) {
+						$data = $this->upload->data();
+						$insert['photo3'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+						addMedia($data);
+					} elseif ($value == 'usunięte') {
+						$insert['photo3'] = '';
+					}
+				} else if ($key == 'server_photo_1') {
+					if ($value != '') {
+						$insert['photo'] = $value;
+					}
+					if ($value == 'usunięte') {
+						$insert['photo'] = '';
+					}
+				} else if ($key == 'server_photo_2') {
+					if ($value != '') {
+						$insert['photo2'] = $value;
+					}
+					if ($value == 'usunięte') {
+						$insert['photo2'] = '';
+					}
+				} else if ($key == 'server_photo_3') {
+					if ($value != '') {
+						$insert['photo3'] = $value;
+					}
+					if ($value == 'usunięte') {
+						$insert['photo3'] = '';
 					}
 				} else {
 					$insert[$key] = $value;

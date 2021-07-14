@@ -7,17 +7,17 @@
             </div>
             <div class="item_container" style="min-height:165px;">
                 <p style="font-size:20px;font-weight:400;text-transform:uppercase;opacity:1;">SIEDZIBA W POLSCE</p>
-                <p>ul. Kościuszki 13, 59-400 Jawor</p>
-                <p>NIP 6951530456, REGON 381991930 , KRS 0000761418</p>
-                <p>tel. + 48 76 87 03 651, fax.+ 48 76 87 03 651</p>
-                <p>email: biuro@msteam.com.pl</p>
+                <p><?= $contact->address . ' ' . $contact->zip_code . ' ' . $contact->city; ?></p>
+                <p>NIP <?= $contact->NIP; ?>, REGON <?= $contact->REGON; ?> , KRS <?= $contact->KRS; ?></p>
+                <p>tel. + <?= $contact->phone1; ?>, fax.+ <?= $contact->phone3; ?></p>
+                <p>email: <?= $contact->email1; ?></p>
             </div>
             <div class="item_container" style="min-height:150px;">
                 <p style="font-size:20px;font-weight:400;text-transform:uppercase;opacity:1;">ODDZIAŁ W NIEMCZECH</p>
-                <p>Oberebaustr 22, 90478 Nürnberg</p>
-                <p>mobile: 015221635562</p>
-                <p>tel. + 48 76 87 03 651, fax.+ 48 76 87 03 651</p>
-                <p>e-mail: i.dagalas@msteam.com.pl</p>
+                <p><?= $contact->address2; ?></p>
+                <p><?= $contact->label2; ?>: <?= $contact->phone2 ?></p>
+                <p><?= $contact->phone4; ?></p>
+                <p>email: <?= $contact->email2; ?></p>
             </div>
         </div>
         <div class="item_container size-3 tab_size-3 mob_size-6">
@@ -69,7 +69,7 @@
         </div>
     </div>
     <div class="box_flex main_padding copyright">
-        <p style="width:50%">Copyright by ms team 2021</p>
+        <p style="width:50%">Copyright by <?= $contact->company; ?> 2021</p>
         <p style="width:50%;text-align:right;">Created with love by AD Awards</p>
     </div>
 </footer>
