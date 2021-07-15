@@ -21,14 +21,14 @@
         <div class="grid-3 gtab-1 mb-5">
             <div class="item_container_center small_padding mb-3">
                 <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
-                <a href="<?= base_url('oferta/1/sieci_elektryczne'); ?>" class="offer-photo blank" style="background-image: url(<?= base_url('uploads/') . $service[1]->photo; ?>);">
+                <a href="<?= base_url('oferta_1'); ?>" class="offer-photo blank" style="background-image: url(<?= base_url('uploads/') . $service[1]->photo; ?>);">
                     <div class="img_overlay_click">
                         <p><?= $service[1]->title; ?></p>
                     </div>
                 </a>
             </div>
             <div class="item_container_center small_padding mb-3">
-                <a href="<?= base_url('oferta/2/fotowoltaika'); ?>" class="offer-photo blank" style="background-image: url(<?= base_url('uploads/') . $service[2]->photo; ?>);">
+                <a href="<?= base_url('oferta_2'); ?>" class="offer-photo blank" style="background-image: url(<?= base_url('uploads/') . $service[2]->photo; ?>);">
                     <div class="img_overlay_click">
                         <p><?= $service[2]->title; ?></p>
                     </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="item_container_center small_padding mb-3">
                 <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
-                <a href="<?= base_url('oferta/3/roboty_ziemne'); ?>" class="offer-photo blank" style="background-image: url(<?= base_url('uploads/') . $service[3]->photo; ?>);">
+                <a href="<?= base_url('oferta_3'); ?>" class="offer-photo blank" style="background-image: url(<?= base_url('uploads/') . $service[3]->photo; ?>);">
                     <div class="img_overlay_click">
                         <p><?= $service[3]->title; ?></p>
                     </div>

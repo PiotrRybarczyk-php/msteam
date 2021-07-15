@@ -45,6 +45,7 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['banner'] = $this->back_m->get_one('logos', 8);
+		$data['offer'] = $this->back_m->get_all('offer_1');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('single_offer', $data);
 	}
@@ -52,6 +53,8 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 9);
+		$data['offer'] = $this->back_m->get_all('offer_2');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('single_offer', $data);
 	}
@@ -59,6 +62,8 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 10);
+		$data['offer'] = $this->back_m->get_all('offer_3');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('single_offer', $data);
 	}
@@ -66,6 +71,8 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 4);
+		$data['project'] = $this->back_m->get_all('projects');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('reals', $data);
 	}
@@ -73,6 +80,8 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 5);
+		$data['work'] = $this->back_m->get_all('work');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('work', $data);
 	}
@@ -80,6 +89,9 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 7);
+		$data['blog'] = $this->back_m->get_all('blog');
+		$data['about'] = $this->back_m->get_one('aboutus', 3);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('blog', $data);
 	}
@@ -87,7 +99,9 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 7);
 		$data['cp'] = $this->uri->segment(1);
+		$data['blog'] = $this->back_m->get_one('blog', $id);
 		echo loadViewsFront('single_article', $data);
 	}
 	public function about()
@@ -104,6 +118,8 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 6);
+		$data['about'] = $this->back_m->get_one('aboutus', 2);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('contact', $data);
 	}

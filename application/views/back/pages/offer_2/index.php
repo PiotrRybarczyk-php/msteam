@@ -1,7 +1,7 @@
     <!-- ########## START: MAIN PANEL ########## -->
     <div class="br-mainpanel">
       <div class="pd-30">
-        <h4 class="tx-gray-800 mg-b-5">Slajder Strony Głównej</h4>
+        <h4 class="tx-gray-800 mg-b-5"><?php echo ucfirst(str_replace('_', ' ', $this->uri->segment(2))); ?></h4>
         <p class="mg-b-0"><?php echo subtitle(); ?></p>
         <hr>
       </div><!-- d-flex -->
@@ -14,7 +14,7 @@
             <thead>
               <tr>
                 <th class="wd-5p align-top">L.p.</th>
-                <th class="wd-45p align-top">Tytuł</th>
+                <th class="wd-30p align-top">Sekcja</th>
                 <th class="wd-50p text-right no-sort">
                   <a href="<?php echo base_url(); ?>panel/<?php echo $this->uri->segment(2); ?>/form/insert" class="btn btn-sm btn-info"><i class="fa fa-plus mg-r-10"></i> Dodaj</a>
                 </th>
@@ -28,9 +28,11 @@
                   <td class="align-middle"><?php echo $value->title; ?></td>
                   <td class="text-right">
                     <a href="<?php echo base_url(); ?>panel/<?php echo $this->uri->segment(2); ?>/form/update/<?php echo $value->id; ?>" class="btn btn-sm btn-info"><i class="icon ion-compose mg-r-10"></i> Edytuj</a>
-                    <a href="<?php echo base_url(); ?>panel/settings/delete/<?php echo $this->uri->segment(2); ?>/<?php echo $value->id; ?>" class="btn btn-sm btn-secondary" onclick="return confirm('Czy na pewno chcesz usunąć <?php echo $value->title; ?>? #<?php echo $value->id; ?>')">
-                      <i class="fa fa-close mg-r-10"></i> Usuń
-                    </a>
+                    <?php if ($i != 1) : ?>
+                      <a href="<?php echo base_url(); ?>panel/settings/delete/<?php echo $this->uri->segment(2); ?>/<?php echo $value->id; ?>" class="btn btn-sm btn-secondary" onclick="return confirm('Czy na pewno chcesz usunąć <?php echo $value->title; ?>? #<?php echo $value->id; ?>')">
+                        <i class="fa fa-close mg-r-10"></i> Usuń
+                      </a>
+                    <?php endif; ?>
                   </td>
                 </tr>
               <?php endforeach; ?>

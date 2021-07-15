@@ -31,7 +31,7 @@
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <a href="#" class="br-menu-link
-        <?php if ($this->uri->segment(2) == 'partners' || $this->uri->segment(2) == 'atributes') {
+        <?php if ($this->uri->segment(2) == 'slider' || $this->uri->segment(2) == 'info' || $this->uri->segment(2) == 'tiles' || $this->uri->segment(2) == 'main_projects') {
           echo 'active';
         } ?>">
       <div class="br-menu-item">
@@ -68,17 +68,8 @@
           echo 'active';
         } ?>">
       <div class="br-menu-item">
-        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <i class="menu-item-icon icon fas fa-address-card tx-20"></i>
         <span class="menu-item-label">Oferty Pracy</span>
-      </div><!-- menu-item -->
-    </a><!-- br-menu-link -->
-    <a href="<?php echo base_url(); ?>panel/aboutus" class="br-menu-link
-        <?php if ($this->uri->segment(2) == 'aboutus') {
-          echo 'active';
-        } ?>">
-      <div class="br-menu-item">
-        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
-        <span class="menu-item-label">O firmie</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/services" class="br-menu-link
@@ -86,8 +77,47 @@
           echo 'active';
         } ?>">
       <div class="br-menu-item">
-        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <i class="menu-item-icon icon fas fa-comment-dollar tx-20"></i>
         <span class="menu-item-label">Z nami Zrealizujesz</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <a href="#" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'offer_1' || $this->uri->segment(2) == 'offer_2' || $this->uri->segment(2) == 'offer_3') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon far fa-caret-square-down tx-20"></i>
+        <span class="menu-item-label">Usługi</span>
+        <i class="menu-item-arrow fa fa-angle-down"></i>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <ul class="br-menu-sub nav flex-column">
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/offer_1" class="nav-link <?php if ($this->uri->segment(2) == 'offer_1' || $this->uri->segment(3) == 'offer_1') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Usługa 1</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/offer_2" class="nav-link <?php if ($this->uri->segment(2) == 'offer_2' || $this->uri->segment(3) == 'offer_2') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Usługa 2</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/offer_3" class="nav-link <?php if ($this->uri->segment(2) == 'offer_3' || $this->uri->segment(3) == 'offer_3') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Usługa 3</a></li>
+    </ul>
+    <a href="<?php echo base_url(); ?>panel/projects" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'projects') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-chart-line tx-20"></i>
+        <span class="menu-item-label">Obecne Realizacje</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/aboutus" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'aboutus') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-edit tx-20"></i>
+        <span class="menu-item-label">O firmie</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/mails" class="br-menu-link

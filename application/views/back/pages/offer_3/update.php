@@ -1,7 +1,7 @@
     <!-- ########## START: MAIN PANEL ########## -->
     <div class="br-mainpanel">
         <div class="pd-30">
-            <h4 class="tx-gray-800 mg-b-5"><?php echo ucfirst(str_replace('_', ' ', $this->uri->segment(2))); ?> #<?php echo $value->id; ?></h4>
+            <h4 class="tx-gray-800 mg-b-5">Podstrony #<?php echo $value->id; ?></h4>
             <p class="mg-b-0"><?php echo subtitle(); ?></p>
             <hr>
         </div><!-- d-flex -->
@@ -19,39 +19,19 @@
                             <!-- set -->
                             <div class="col-md-12 pr-0">
                                 <div class="form-group">
-                                    <label class="form-control-label"><?php echo $value->title; ?></label>
-                                </div>
-                            </div><!-- col-4 -->
-                            <div class="col-md-12 pr-0">
-                                <div class="form-group">
                                     <label class="form-control-label">Tytuł: <span class="tx-danger">*</span></label>
-                                    <input class="form-control" type="text" name="subtitle" value="<?php echo $value->subtitle; ?>" required>
+                                    <input class="form-control" type="text" name="title" value="<?php echo $value->title; ?>" required>
                                 </div>
                             </div><!-- col-4 -->
-                            <?php if ($value->update_link != "ommit") : ?>
-                                <div class="col-md-12 pr-0">
-                                    <div class="form-group bd-t-0-force">
-                                        <label for="update" class="form-control-label">Wybierz Aktualność w zakładce O nas: <span class="tx-danger">*</span></label>
-                                        <select class="form-control" id="update" name="update_link">
-                                            <?php foreach ($update as $element) : ?>
-                                                <option <?php if ($value->update_link == $element->title) echo 'selected'; ?> value="<?= $element->title; ?>"><?= $element->title; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                </div><!-- col-4 -->
-                            <?php endif; ?>
                         </div> <!-- set -->
                         <div class="row">
                             <!-- set -->
-                            <?php if ($value->description != "ommit") : ?>
-                                <div class="col-md-12 pr-0">
-                                    <div class="form-group bd-t-0-force bd-b-0-force">
-                                        <label class="form-control-label">Opis działu:</label>
-                                        <textarea class="summernote" name="description"><?php echo $value->description; ?></textarea>
-                                    </div>
+                            <div class="col-md-12 pr-0">
+                                <div class="form-group bd-t-0-force bd-b-0-force">
+                                    <label class="form-control-label">Opis:</label>
+                                    <textarea class="summernote" name="description"><?php echo $value->description; ?></textarea>
                                 </div>
-                            <?php endif; ?>
-                            <!-- col-4 -->
+                            </div><!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
                             <div class="col-md-12 pr-0">
@@ -62,10 +42,10 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ($value->photo != "ommit") : ?>
+                    <?php if ($value->photo != 'ommit') : ?>
                         <div class="col-md-4">
                             <div class="col-md-12">
-                                <div id="photoViewer_1" class="form-group bd-l-0-force text-center delete_photo cursor" onclick="clear_box(1);">
+                                <div id="photoViewer_1" class="form-group bd-l-0-force text-center">
                                     <?php if ($value->photo != '') {
                                         echo '<img class="img-fluid img-thumbnail" src="' . base_url() . 'uploads/' . $value->photo . '" width=75%>';
                                     } else {

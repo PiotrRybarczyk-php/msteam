@@ -21,7 +21,7 @@ foreach ($update as $blog_item) {
     <div class="container">
         <div class="header-section">
             <div class="separator-line"></div>
-            <div class="header-title"><?= $about->title; ?></div>
+            <div class="header-title"><?= $about->subtitle; ?></div>
             <div class="separator-line"></div>
         </div>
     </div>
