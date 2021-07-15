@@ -1,4 +1,37 @@
 <body>
+  <script type="text/javascript">
+    function changeLang(lang) {
+      $.ajax({
+        url: "<?php echo base_url(); ?>home/change/" + lang + "",
+        success: function() {
+          location.reload();
+        }
+      });
+    }
+  </script>
+
+  <?php if ($_SESSION['lang'] != 'pl') : ?>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'pl',
+          layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+        }, 'google_translate_element');
+      }
+      jQuery('.lang-select').click(function() {
+        var theLang = jQuery(this).attr('data-lang');
+        jQuery('.goog-te-combo').val(theLang);
+        window.location = jQuery(this).attr('href');
+        location.reload();
+      });
+    </script>
+  <?php endif; ?>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+  </style>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -38,9 +71,9 @@
           </ul>
           <div class="mb-2">
             <div class="d-flex justify-content-center">
-              <a href="#"><img src="<?= base_url(); ?>assets/front/icons/pl.svg" alt="" width="25"></a>
-              <a href="#" class="mx-3"><img src="<?= base_url(); ?>assets/front/icons/eng.svg" alt="" width="25"></a>
-              <a href="#"><img src="<?= base_url(); ?>assets/front/icons/de.svg" alt="" width="25"></a>
+              <a class="blank" href="#googtrans(pl|pl)" data-lang="en" onclick="changeLang('pl');"><img src="<?= base_url(); ?>assets/front/icons/pl.svg" alt="" width="25"></a>
+              <a class="blank mx-3" href="#googtrans(pl|en)" data-lang="en" onclick="changeLang('en');"><img src="<?= base_url(); ?>assets/front/icons/eng.svg" alt="" width="25"></a>
+              <a class="blank" href="#googtrans(pl|de)" data-lang="en" onclick="changeLang('de');"><img src="<?= base_url(); ?>assets/front/icons/de.svg" alt="" width="25"></a>
             </div>
           </div>
         </div>

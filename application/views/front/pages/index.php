@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="item_container_center tab_show my-4">
-                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                        <a class="blank" href="oferta_1"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="item_container_center tab_show my-4">
-                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                        <a class="blank" href="oferta_2"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
@@ -105,18 +105,18 @@
                         </div>
                     </div>
                     <div class="item_container_center tab_show my-4">
-                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                        <a class="blank" href="oferta_3"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                 </div>
-                <div class="grid-3 gtab-1 mt-5 tab_hide">
+                <div class="grid-3 gtab-1 mt-5 tab_hide qa_fade">
                     <div class="item_container_center">
-                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                        <a class="blank" href="oferta_1"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                     <div class="item_container_center">
-                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                        <a class="blank" href="oferta_2"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                     <div class="item_container_center">
-                        <a class="blank" href="#"><button class="btn_JS">Sprawdź Ofertę</button></a>
+                        <a class="blank" href="oferta_3"><button class="btn_JS">Sprawdź Ofertę</button></a>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
             <div class="box_center main_padding">
                 <div class="grid-4 gtab-2 gmob-1">
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[0]->photo; ?>"></span></div>
+                        <div class="item_container_center qa_fade-left"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[0]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[0]->title; ?></p>
                         </div>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[1]->photo; ?>"></span></div>
+                        <div class="item_container_center qa_fade-right"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[1]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[1]->title; ?></p>
                         </div>
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[2]->photo; ?>"></span></div>
+                        <div class="item_container_center qa_fade-left"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[2]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[2]->title; ?></p>
                         </div>
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                     <div class="item_container small_padding">
-                        <div class="item_container_center"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[3]->photo; ?>"></span></div>
+                        <div class="item_container_center qa_fade-right"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[3]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[3]->title; ?></p>
                         </div>
@@ -205,7 +205,7 @@
             </div>
             <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
                 <div class="box_flex flex_mob" style="min-height:500px;">
-                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $work_photo; ?>)"></div>
+                    <div class="item_container_picture qa_fade-left" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $work_photo; ?>)"></div>
                 </div>
                 <div class="box_flex flex_mob small_padding">
                     <div class="grid-1" style="max-width:640px;">
@@ -213,7 +213,7 @@
                             <div class="absolute_el" style="top:70px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
                             <p class="second_header"><?= $work_title; ?></p>
                         </div>
-                        <div class="content_with_padding">
+                        <div class="content_with_padding qa_fade">
                             <?= textlim($work_desc, 400); ?>
                         </div>
                         <div class="grid-2 gmob-1" style="max-width:504px;">
@@ -237,7 +237,7 @@
             </div>
             <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
                 <div class="box_flex flex_mob_l small_padding">
-                    <div class="grid-1" style="max-width:520px;">
+                    <div class="grid-1 qa_fade" style="max-width:520px;">
                         <div class="box_flex">
                             <p class="second_header"><?= $blog_title; ?></p>
                         </div>
@@ -248,7 +248,7 @@
                     </div>
                 </div>
                 <div class="box_flex flex_mob_l" style="min-height:500px;">
-                    <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $blog_photo; ?>)"></div>
+                    <div class="item_container_picture qa_fade-right" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $blog_photo; ?>)"></div>
                 </div>
                 <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="wpis/<?= $blog_id; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
             </div>
@@ -306,7 +306,7 @@
                     </div>
                 </div>
                 <div class="grid-1">
-                    <div class="item_container_center">
+                    <div class="item_container_center qa_fade-up">
                         <a class="blank" href="<?= $info[5]->link; ?>"><button class="btn_JS"><?= $info[5]->button; ?></button></a>
                     </div>
                 </div>

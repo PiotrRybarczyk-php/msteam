@@ -18,6 +18,26 @@
   width: 100%;
 }
 
+a.social_icon {
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0.5;
+  cursor: pointer;
+}
+a.social_icon:hover {
+  opacity: 1;
+}
+
+a.footer_link {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a.footer_link:hover {
+  opacity: 1 !important;
+  color: yellow;
+}
+
 .navbar-nav .nav-item .nav-link {
   color: #00abd7;
   transition: 0.5s all;

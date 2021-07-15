@@ -3,7 +3,21 @@
         <p><?= $banner->title; ?></p>
     </div>
 </div>
-<div class="box_flex flex_c main_padding">
+<?php if ($this->session->flashdata('success')) : ?>
+    <div class="box_flex main_padding">
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <strong><?= $this->session->flashdata('success') ?></strong>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if ($this->session->flashdata('error')) : ?>
+    <div class="box_flex flex_mob_l main_padding">
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <strong><?= $this->session->flashdata('error') ?></strong>
+        </div>
+    </div>
+<?php endif; ?>
+<div class="box_flex flex_mob_l main_padding">
     <div class="grid-2 gtab-1 bottom_sep" style="min-height:504px;max-width:1440px;">
         <div class="box_flex flex_c" style="min-height:500px;">
             <div class="work-photo-border">

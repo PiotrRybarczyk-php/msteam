@@ -4,6 +4,7 @@ html {
 }
 body {
   overflow-x: hidden;
+  top: 0px !important;
 }
 :root {
   --c2: 50%;

@@ -3,7 +3,7 @@
 
 $cfg = array(
 	'smtp_host' => 'smtp.przedprojekt.com',
-	'smtp_user' => 'postmaster@jetlook.przedprojekt.com',
-	'smtp_pass' => '10l8t6P0gA',
+	'smtp_user' => 'mailer@msteam.przedprojekt.com',
+	'smtp_pass' => '39q5vG6UOg',
 	'smtp_port' => 587
 );

@@ -543,18 +543,26 @@
       </div>
 
       <div class="pd-y-20 pd-x-25 tx-white">
-        <h6 class="tx-13 tx-normal">Instagram:</h6>
-        <p class="op-5 tx-13">Adres URL do Twojego profilu na Instagram'ie</p>
+        <h6 class="tx-13 tx-normal">Vimeo:</h6>
+        <p class="op-5 tx-13">Adres URL do Twojego profilu na Vimeo</p>
         <div class="pos-relative">
-          <input type="text" id="inst_link" name="inst_link" onchange="updateField('inst_link' , 'settings')" value="<?php echo $settings->inst_link; ?>" class="form-control form-control-inverse transition pd-y-10">
+          <input type="text" id="vi_link" name="vi_link" onchange="updateField('vi_link' , 'settings')" value="<?php echo $settings->vi_link; ?>" class="form-control form-control-inverse transition pd-y-10">
         </div>
       </div>
 
       <div class="pd-y-20 pd-x-25 tx-white">
-        <h6 class="tx-13 tx-normal">YouTube:</h6>
-        <p class="op-5 tx-13">Adres URL do Twojego profilu na YouTube'ie</p>
+        <h6 class="tx-13 tx-normal">Xing:</h6>
+        <p class="op-5 tx-13">Adres URL do Twojego profilu na xing</p>
         <div class="pos-relative">
-          <input type="text" id="yt_link" name="yt_link" onchange="updateField('yt_link' , 'settings')" value="<?php echo $settings->yt_link; ?>" class="form-control form-control-inverse transition pd-y-10">
+          <input type="text" id="xi_link" name="xi_link" onchange="updateField('xi_link' , 'settings')" value="<?php echo $settings->xi_link; ?>" class="form-control form-control-inverse transition pd-y-10">
+        </div>
+      </div>
+
+      <div class="pd-y-20 pd-x-25 tx-white">
+        <h6 class="tx-13 tx-normal">Periscope:</h6>
+        <p class="op-5 tx-13">Adres URL do Twojego profilu na periscope</p>
+        <div class="pos-relative">
+          <input type="text" id="pe_link" name="pe_link" onchange="updateField('pe_link' , 'settings')" value="<?php echo $settings->pe_link; ?>" class="form-control form-control-inverse transition pd-y-10">
         </div>
       </div>
 

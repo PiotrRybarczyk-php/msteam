@@ -10,6 +10,9 @@ class Home extends CI_Controller
 		if (!$this->db->table_exists('users')) {
 			$this->base_m->create_base();
 		}
+		if (!isset($_SESSION['lang'])) {
+			$_SESSION['lang'] = 'pl';
+		}
 	}
 
 	public function change($lang)
