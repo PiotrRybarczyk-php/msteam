@@ -27,7 +27,7 @@ class Home extends CI_Controller
 		$data['work'] = $this->back_m->get_all('work');
 		$data['tile'] = $this->back_m->get_all('tiles');
 		$data['update'] = $this->back_m->get_all('blog');
-		$data['project'] = $this->back_m->get_all('main_projects');
+		$data['project'] = $this->back_m->get_all('mainprojects');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('index', $data);
 	}

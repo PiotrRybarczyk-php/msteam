@@ -50,7 +50,7 @@
       <li class="nav-item"><a href="<?php echo base_url(); ?>panel/tiles" class="nav-link <?php if ($this->uri->segment(2) == 'tiles' || $this->uri->segment(3) == 'tiles') {
                                                                                             echo 'active';
                                                                                           } ?>">Kafelki</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/main_projects" class="nav-link <?php if ($this->uri->segment(2) == 'main_projects' || $this->uri->segment(3) == 'main_projects') {
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/mainprojects" class="nav-link <?php if ($this->uri->segment(2) == 'mainprojects' || $this->uri->segment(3) == 'mainprojects') {
                                                                                                     echo 'active';
                                                                                                   } ?>">Realizacje</a></li>
     </ul>
