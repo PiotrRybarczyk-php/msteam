@@ -27,9 +27,9 @@ class Home extends CI_Controller
 		$data['slider'] = $this->back_m->get_all('slider');
 		$data['info'] = $this->back_m->get_all('info');
 		$data['offer'] = $this->back_m->get_all('services');
-		$data['work'] = $this->back_m->get_all('work');
+		$data['work'] = $this->back_m->get_one_work();
 		$data['tile'] = $this->back_m->get_all('tiles');
-		$data['update'] = $this->back_m->get_all('blog');
+		$data['update'] = $this->back_m->get_one_article_main();
 		$data['project'] = $this->back_m->get_all('mainprojects');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('index', $data);
@@ -75,7 +75,7 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['banner'] = $this->back_m->get_one('logos', 4);
-		$data['project'] = $this->back_m->get_all('projects');
+		$data['project'] = $this->back_m->get_with_limit('projects', 10, 'desc');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('reals', $data);
 	}
@@ -84,7 +84,7 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['banner'] = $this->back_m->get_one('logos', 5);
-		$data['work'] = $this->back_m->get_all('work');
+		$data['work'] = $this->back_m->get_with_limit('work', 10, 'desc');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('work', $data);
 	}
@@ -93,7 +93,7 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['banner'] = $this->back_m->get_one('logos', 7);
-		$data['blog'] = $this->back_m->get_all('blog');
+		$data['blog'] = $this->back_m->get_with_limit('blog', 10, 'desc');
 		$data['about'] = $this->back_m->get_one('aboutus', 3);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('blog', $data);
@@ -112,7 +112,7 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['banner'] = $this->back_m->get_one('logos', 2);
-		$data['update'] = $this->back_m->get_all('blog');
+		$data['update'] = $this->back_m->get_one_article_about();
 		$data['about'] = $this->back_m->get_one('aboutus', 1);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('about', $data);

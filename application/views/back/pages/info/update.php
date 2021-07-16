@@ -53,7 +53,7 @@
                                         <label for="work" class="form-control-label">Wybierz Ofertę Pracy: <span class="tx-danger">*</span></label>
                                         <select class="form-control" id="work" name="work_link">
                                             <?php foreach ($work as $element) : ?>
-                                                <option <?php if ($value->work_link == $element->title) echo 'selected'; ?> value="<?= $element->title; ?>"><?= $element->title; ?></option>
+                                                <option <?php if ($value->work_link == $element->id) echo 'selected'; ?> value="<?= $element->id; ?>"><?= $element->title; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
@@ -65,7 +65,7 @@
                                         <label for="update" class="form-control-label">Wybierz Aktualność na Stronie Głównej: <span class="tx-danger">*</span></label>
                                         <select class="form-control" id="update" name="update_link">
                                             <?php foreach ($update as $element) : ?>
-                                                <option <?php if ($value->update_link == $element->title) echo 'selected'; ?> value="<?= $element->title; ?>"><?= $element->title; ?></option>
+                                                <option <?php if ($value->update_link == $element->id) echo 'selected'; ?> value="<?= $element->id; ?>"><?= $element->title; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>

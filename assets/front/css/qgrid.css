@@ -144,6 +144,10 @@ p.card_name {
   padding-left: 0.6vw;
   padding-right: 0.6vw;
 }
+.medium_padding {
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+}
 .simple_text {
   color: #212121;
   font-size: 20px;

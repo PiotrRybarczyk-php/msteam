@@ -31,7 +31,7 @@
                 <div class="article-photo-border bottom_sep">
                     <div class="item_container_picture" style="min-height:504px;background-image:url(<?= base_url('uploads/') . $blog->photo3; ?>);"></div>
                 </div>
-                <div class="box_flex flex_mob_l mob_show"><a class="blank" href="#"><button class="btn_static">Wróć</button></a></div>
+                <div class="box_flex flex_mob_l mob_show"><a class="blank" href="<?= base_url('aktualnosci'); ?>"><button class="btn_static">Wróć</button></a></div>
             </div>
             <div class="box_flex flex_mob small_padding">
                 <div class="grid-1 tab_hide" style="max-width:674px;">

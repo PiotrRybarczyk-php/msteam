@@ -1,17 +1,3 @@
-<?php
-$blog_id = 0;
-$blog_title = '';
-$blog_desc = '';
-$blog_photo = '';
-foreach ($update as $blog_item) {
-    if ($blog_item->title == $about->update_link) {
-        $blog_title = $blog_item->title;
-        $blog_desc = $blog_item->description;
-        $blog_photo = $blog_item->photo;
-        $blog_id = $blog_item->id;
-    }
-}
-?>
 <div class="banner" style="background-position:center <?= $banner->position; ?>%;background-image:url(<?= base_url('uploads/') . $banner->photo; ?>);">
     <div class="item_container_align" style="background-image: linear-gradient(270deg, rgba(0, 171, 215, 0) 0%,rgba(0, 171, 215, 0.2) 60%, #000000 100%);">
         <p><?= $banner->title; ?></p>
@@ -35,7 +21,7 @@ foreach ($update as $blog_item) {
                     </div>
                 </div>
             </div>
-            <div class="box_flex flex_c" style="min-height:500px;">
+            <div class="box_flex flex_c medium_padding" style="min-height:500px;">
                 <div class="work-photo-border" style="max-height:520px;">
                     <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/') . $about->photo; ?>);"></div>
                 </div>
@@ -59,15 +45,15 @@ foreach ($update as $blog_item) {
         <div class="box_flex flex_mob_l small_padding">
             <div class="grid-1" style="max-width:520px;">
                 <div class="box_flex">
-                    <p class="second_header"><?= $blog_title; ?></p>
+                    <p class="second_header"><?= $update->title; ?></p>
                 </div>
-                <div class="content_with_padding"><?= textlim($blog_desc, 400); ?></div>
-                <div class="box_flex flex_mob tab_hide"><a class="blank" href="wpis/<?= $blog_id; ?>/Artukul"><button class="btn_static">Czytaj Więcej</button></a></div>
+                <div class="content_with_padding"><?= textlim($update->description, 400); ?></div>
+                <div class="box_flex flex_mob tab_hide"><a class="blank" href="wpis/<?= $update->id; ?>/Artukul"><button class="btn_static">Czytaj Więcej</button></a></div>
             </div>
         </div>
         <div class="box_flex flex_mob_l" style="min-height:500px;">
-            <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/') . $blog_photo; ?>);"></div>
+            <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/') . $update->photo; ?>);"></div>
         </div>
-        <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="#"><button class="btn_static">Czytaj Więcej</button></a></div>
+        <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="wpis/<?= $update->id; ?>/Artukul"><button class="btn_static">Czytaj Więcej</button></a></div>
     </div>
 </section>

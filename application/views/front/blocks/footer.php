@@ -9,15 +9,15 @@
                 <p style="font-size:20px;font-weight:400;text-transform:uppercase;opacity:1;">SIEDZIBA W POLSCE</p>
                 <p><?= $contact->address . ' ' . $contact->zip_code . ' ' . $contact->city; ?></p>
                 <p>NIP <?= $contact->NIP; ?>, REGON <?= $contact->REGON; ?> , KRS <?= $contact->KRS; ?></p>
-                <p>tel. + <?= $contact->phone1; ?>, fax.+ <?= $contact->phone3; ?></p>
-                <p>email: <?= $contact->email1; ?></p>
+                <p><a href="tel:<?= $contact->phone1; ?>" class="footer_link">tel. + <?= $contact->phone1; ?></a>, <a href="tel:<?= $contact->phone3; ?>" class="footer_link">fax.+ <?= $contact->phone3; ?></a></p>
+                <p><a href="mailto:<?= $contact->email1; ?>" class="footer_link">email: <?= $contact->email1; ?></a></p>
             </div>
             <div class="item_container" style="min-height:150px;">
                 <p style="font-size:20px;font-weight:400;text-transform:uppercase;opacity:1;">ODDZIAŁ W NIEMCZECH</p>
                 <p><?= $contact->address2; ?></p>
-                <p><?= $contact->label2; ?>: <?= $contact->phone2 ?></p>
-                <p><?= $contact->phone4; ?></p>
-                <p>email: <?= $contact->email2; ?></p>
+                <p><a href="tel:<?= $contact->phone2 ?>" class="footer_link"><?= $contact->label2; ?>: <?= $contact->phone2 ?></a></p>
+                <p><a href="tel:<?= $contact->phone4; ?>" class="footer_link"><?= $contact->phone4; ?></a></p>
+                <p><a href="mailto:<?= $contact->email2; ?>" class="footer_link">email: <?= $contact->email2; ?></a></p>
             </div>
         </div>
         <div class="item_container size-3 tab_size-3 mob_size-6">
@@ -37,7 +37,7 @@
         </div>
         <div class="item_container size-1 tab_size-3 mob_size-6">
             <div class="item_container" style="height:85px;">
-                <p style="font-size:20px;font-weight:600;opacity:1;">Loren Ipsum</p>
+                <p style="font-size:20px;font-weight:600;opacity:1;">Przydatne linki</p>
             </div>
             <div class="item_container" style="height:65px;">
                 <a class="footer_link" href="<?= base_url('aktualnosci'); ?>">
@@ -60,7 +60,7 @@
                 </a>
             </div>
         </div>
-        <div class="box_flex flex_mob flex_align_c size-3 tab_size-12">
+        <div class="box_flex flex_mob flex_align_c size-3 tab_size-12 pb-3">
             <a href="<?= $settings->fb_link; ?>" class="social_icon"><i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/fb.svg"></i></a>
             <a href="<?= $settings->tw_link; ?>" class="social_icon"><i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/tw.svg"></i></a>
             <a href="<?= $settings->vi_link; ?>" class="social_icon"><i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/vi.svg"></i></a>
@@ -68,9 +68,9 @@
             <a href="<?= $settings->pe_link; ?>" class="social_icon"><i class="footer_icon"><img src="<?= base_url(); ?>assets/front/icons/pe.svg"></i></a>
         </div>
     </div>
-    <div class="box_flex main_padding copyright">
+    <div class="box_flex flex_align_c main_padding copyright">
         <p style="width:50%">Copyright by <?= $contact->company; ?> 2021</p>
-        <p style="width:50%;text-align:right;">Created with love by AD Awards</p>
+        <p style="width:50%;text-align:right;">Created with love by <a href="https://agencjamedialna.pro/" class="footer_link">AD Awards</a></p>
     </div>
 </footer>
 <script type="text/javascript" src="<?= assets(); ?>js/jquery-3.4.1.min.js"></script>

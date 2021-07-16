@@ -32,6 +32,7 @@ a.footer_link {
   color: white;
   text-decoration: none;
   transition: 0.5s;
+  cursor: pointer;
 }
 a.footer_link:hover {
   opacity: 1 !important;
@@ -56,6 +57,12 @@ a.footer_link:hover {
 .main_padding {
   padding-left: 9vw !important;
   padding-right: 9vw !important;
+}
+
+.slider_spacer {
+  display: block;
+  width: 100%;
+  height: 100px;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -490,6 +497,7 @@ footer .item_container {
 
 .copyright {
   border-top: 1px solid white;
+  min-height: 39px;
 }
 .contact_title {
   margin-bottom: 32px;
@@ -527,6 +535,66 @@ p.contact_info {
   text-align: left;
 }
 @media (max-width: 1600px) {
+  .medium_padding {
+    padding-left: 2.3vw !important;
+    padding-right: 2.3vw !important;
+  }
+  .line_a_h_black {
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    left: -4vw;
+    top: -2vw;
+    border-top: 1px solid black;
+  }
+
+  .line_a_h_cyan {
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    left: -2vw;
+    top: -1vw;
+    border-top: 1px solid #00abd7;
+  }
+
+  .line_a_v_black {
+    position: absolute;
+    width: 1px;
+    height: 170px;
+    left: -1vw;
+    top: -80px;
+    border-left: 1px solid black;
+  }
+
+  .line_b_h_black {
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    right: -4vw;
+    bottom: -32px;
+    border-top: 1px solid black;
+  }
+
+  .line_b_v_cyan {
+    position: absolute;
+    width: 1px;
+    height: 170px;
+    right: 0px;
+    bottom: -50px;
+    border-left: 1px solid #00abd7;
+  }
+
+  .line_b_v_black {
+    position: absolute;
+    width: 1px;
+    height: 170px;
+    right: -1vw;
+    bottom: -80px;
+    border-left: 1px solid black;
+  }
+  .tile_line {
+    border-right: 2px solid rgba(0, 171, 215, 0.3);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -535,6 +603,9 @@ p.contact_info {
   }
   .banner p {
     margin-left: unset;
+  }
+  .tile_line {
+    border-right: none;
   }
 }
 
@@ -566,6 +637,9 @@ p.contact_info {
   }
   .header-section .header-title {
     font-size: 22px;
+  }
+  .tile_sp {
+    padding-top: 20px;
   }
   .img_overlay p {
     width: 100%;

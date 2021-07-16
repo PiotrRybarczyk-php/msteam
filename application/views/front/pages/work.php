@@ -31,7 +31,7 @@
                             <div class="content_with_padding">
                                 <?= $element->description; ?>
                             </div>
-                            <div class="box_flex flex_mob_l"><a class="blank" href="#"><button class="btn_static">kontakt</button></a></div>
+                            <div class="box_flex flex_mob_l"><a class="blank" href="kontakt?link=<?= slug($element->title); ?>"><button class="btn_static">kontakt</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             <div class="content_with_padding">
                                 <?= $element->description; ?>
                             </div>
-                            <div class="box_flex flex_mob_l"><a class="blank" href="#"><button class="btn_static">kontakt</button></a></div>
+                            <div class="box_flex flex_mob_l"><a class="blank" href="kontakt?link=<?= slug($element->title); ?>"><button class="btn_static">kontakt</button></a></div>
                         </div>
                     </div>
                     <div class="box_flex flex_c" style="min-height:500px;">
@@ -72,7 +72,7 @@
                             <div class="content_with_padding">
                                 <?= $element->description; ?>
                             </div>
-                            <div class="box_flex flex_mob_l"><a class="blank" href="#"><button class="btn_static">kontakt</button></a></div>
+                            <div class="box_flex flex_mob_l"><a class="blank" href="kontakt?link=<?= slug($element->title); ?>"><button class="btn_static">kontakt</button></a></div>
                         </div>
                     </div>
                 </div>

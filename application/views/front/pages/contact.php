@@ -1,3 +1,10 @@
+<?php
+if (isset($_GET['link'])) {
+    $subject = $_GET['link'];
+} else {
+    $subject = '';
+}
+?>
 <div class="banner bottom_sep" style="background-position:center <?= $banner->position; ?>%;background-image:url(<?= base_url('uploads/') . $banner->photo; ?>);">
     <div class="item_container_align" style="background-image: linear-gradient(270deg, rgba(0, 171, 215, 0) 0%,rgba(0, 171, 215, 0.2) 60%, #000000 100%);">
         <p><?= $banner->title; ?></p>
@@ -34,14 +41,14 @@
         </div>
     </div>
 </div>
-<div class="box_center main_padding">
+<div class="box_center main_padding" id="form">
     <div class="contact_form pt-3">
         <h2 class="contact_title">MAJĄ PAŃSTWO PYTANIA? ZAPRASZAMY DO KONTAKTU!</h2>
         <form action="<?= base_url(); ?>mailer/send" method="POST" id="contact-form">
             <div class="grid-2 gtab-1">
                 <div class="item_container_center small_padding">
                     <div class="grid-1">
-                        <input required type="subject" id="defaultContactFormSubject" class="contact_input" style="margin-bottom:40px;" placeholder="Napisz temat wiadomości" name="subject">
+                        <input required type="subject" id="defaultContactFormSubject" class="contact_input" style="margin-bottom:40px;" placeholder="Napisz Temat Wiadomości" value="<?= $subject; ?>" name="subject">
                         <input required type="text" id="defaultContactFormName" class="contact_input" style="margin-bottom:40px;" placeholder="Imię i nazwisko" name="name">
                         <input required type="text" id="defaultContactFormPhone" class="contact_input" style="margin-bottom:40px;" placeholder="Telefon Kontakotwy" name="phone">
                         <input required type="email" id="defaultContactFormEmail" class="contact_input" style="margin-bottom:40px;" placeholder="Adres E-mailowy" name="email">

@@ -1,28 +1,5 @@
-        <?php
-        $c = 0;
-        $work_title = "";
-        $work_desc = "";
-        $work_photo = "";
-        $blog_id = 0;
-        $blog_title = "";
-        $blog_desc = "";
-        $blog_photo = "";
-        foreach ($work as $work_item) {
-            if ($work_item->title == $info[3]->work_link) {
-                $work_title = $work_item->title;
-                $work_desc = $work_item->description;
-                $work_photo = $work_item->photo;
-            }
-        }
-        foreach ($update as $blog_item) {
-            if ($blog_item->title == $info[4]->update_link) {
-                $blog_title = $blog_item->title;
-                $blog_desc = $blog_item->description;
-                $blog_photo = $blog_item->photo;
-                $blog_id = $blog_item->id;
-            }
-        }
-        ?>
+        <?php $c = 0; ?>
+        <div class="slider_spacer"></div>
         <section>
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -137,7 +114,7 @@
                         <div class="item_flex flex_r tab_hide"><a class="blank" href="<?= $info[1]->link; ?>"><button class="btn_JS"><?= $info[1]->button; ?></button></a></div>
                     </div>
                 </div>
-                <div class="item_container_align small_padding">
+                <div class="item_container_align medium_padding">
                     <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $info[1]->photo;  ?>);"></div>
                 </div>
                 <div class="item_container_center tab_show mt-5"><a class="blank" href="<?= $info[1]->link; ?>"><button class="btn_JS"><?= $info[1]->button; ?></button></a></div>
@@ -156,7 +133,7 @@
             </div>
             <div class="box_center main_padding">
                 <div class="grid-4 gtab-2 gmob-1">
-                    <div class="item_container small_padding">
+                    <div class="item_container small_padding tile_sp tile_line">
                         <div class="item_container_center qa_fade-left"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[0]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[0]->title; ?></p>
@@ -165,7 +142,7 @@
                             <div class="tile_content"><?= textlim($tile[0]->description, 500); ?></div>
                         </div>
                     </div>
-                    <div class="item_container small_padding">
+                    <div class="item_container small_padding tile_sp tile_line">
                         <div class="item_container_center qa_fade-right"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[1]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[1]->title; ?></p>
@@ -174,7 +151,7 @@
                             <div class="tile_content"><?= textlim($tile[1]->description, 500); ?></div>
                         </div>
                     </div>
-                    <div class="item_container small_padding">
+                    <div class="item_container small_padding tile_sp tile_line">
                         <div class="item_container_center qa_fade-left"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[2]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[2]->title; ?></p>
@@ -183,7 +160,7 @@
                             <div class="tile_content"><?= textlim($tile[2]->description, 500); ?></div>
                         </div>
                     </div>
-                    <div class="item_container small_padding">
+                    <div class="item_container small_padding tile_sp">
                         <div class="item_container_center qa_fade-right"><span class="blue_circle"><img class="circle_icon" src="<?= base_url('uploads/') . $tile[3]->photo; ?>"></span></div>
                         <div class="item_container_center">
                             <p class="tile_header"><?= $tile[3]->title; ?></p>
@@ -205,19 +182,19 @@
             </div>
             <div class="grid-2 gtab-1 main_padding" style="min-height:504px;">
                 <div class="box_flex flex_mob" style="min-height:500px;">
-                    <div class="item_container_picture qa_fade-left" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $work_photo; ?>)"></div>
+                    <div class="item_container_picture qa_fade-left" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $work->photo; ?>)"></div>
                 </div>
                 <div class="box_flex flex_mob small_padding">
                     <div class="grid-1" style="max-width:640px;">
                         <div class="box_flex">
                             <div class="absolute_el" style="top:70px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
-                            <p class="second_header"><?= $work_title; ?></p>
+                            <p class="second_header"><?= $work->title; ?></p>
                         </div>
                         <div class="content_with_padding qa_fade">
-                            <?= textlim($work_desc, 400); ?>
+                            <?= textlim($work->description, 400); ?>
                         </div>
                         <div class="grid-2 gmob-1" style="max-width:504px;">
-                            <div class="item_container_center mb-1"><a class="blank" href="kontakt"><button class="btn_static">Kontakt</button></a></div>
+                            <div class="item_container_center mb-1"><a class="blank" href="kontakt?link=<?= slug($work->title); ?>"><button class="btn_static">Kontakt</button></a></div>
                             <div class="item_container_center mb-1"><a class="blank" href="praca"><button class="btn_static">Zobacz Więcej Ofert</button></a></div>
                         </div>
                     </div>
@@ -239,18 +216,18 @@
                 <div class="box_flex flex_mob_l small_padding">
                     <div class="grid-1 qa_fade" style="max-width:520px;">
                         <div class="box_flex">
-                            <p class="second_header"><?= $blog_title; ?></p>
+                            <p class="second_header"><?= $update->title; ?></p>
                         </div>
                         <div class="content_with_padding">
-                            <?= textlim($blog_desc, 400); ?>
+                            <?= textlim($update->description, 400); ?>
                         </div>
-                        <div class="box_flex flex_mob tab_hide"><a class="blank" href="wpis/<?= $blog_id; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
+                        <div class="box_flex flex_mob tab_hide"><a class="blank" href="wpis/<?= $update->id; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
                     </div>
                 </div>
                 <div class="box_flex flex_mob_l" style="min-height:500px;">
-                    <div class="item_container_picture qa_fade-right" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $blog_photo; ?>)"></div>
+                    <div class="item_container_picture qa_fade-right" style="max-width:642px;background-image:url(<?= base_url('uploads/'); ?><?= $update->photo; ?>)"></div>
                 </div>
-                <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="wpis/<?= $blog_id; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
+                <div class="box_flex flex_mob tab_show mt-1"><a class="blank" href="wpis/<?= $update->photo; ?>/Artykul"><button class="btn_static"><?= $info[4]->button; ?></button></a></div>
             </div>
         </section>
         <section style="margin-bottom:140px">

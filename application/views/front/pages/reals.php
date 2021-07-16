@@ -7,7 +7,7 @@
 <?php foreach ($project as $element) : ?>
     <section>
         <?php if ($c % 2 == 0) : ?>
-            <div class="box_flex flex_mob main_padding">
+            <div class="box_flex flex_mob main_padding tab_hide">
                 <div class="grid-2 gtab-1 mb-5" style="min-height:504px;">
                     <div class="box_flex flex_c small_padding">
                         <div class="grid-1">
@@ -26,8 +26,26 @@
                     </div>
                 </div>
             </div>
+            <!-- tablet/mobile view -->
+            <div class="box_flex flex_mob main_padding tab_show">
+                <div class="grid-2 gtab-1 mb-5" style="min-height:504px;">
+                    <div class="box_flex flex_c small_padding">
+                        <div class="grid-1">
+                            <div class="box_flex pb-5">
+                                <p class="second_header"><?= $element->title; ?></p>
+                            </div>
+                            <div class="work-photo-border" style="min-height:500px;">
+                                <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"></div>
+                            </div>
+                            <div class="content_with_padding" style="max-width:unset;">
+                                <?= $element->description; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <?php else : ?>
-            <div class="box_flex flex_mob_l main_padding">
+            <div class="box_flex flex_mob_l main_padding tab_hide">
                 <div class="grid-2 gtab-1 mb-5" style="min-height:504px;">
                     <div class="box_flex flex_c" style="min-height:500px;">
                         <div class="work-photo-border">
@@ -38,6 +56,24 @@
                         <div class="grid-1">
                             <div class="box_flex">
                                 <p class="second_header"><?= $element->title; ?></p>
+                            </div>
+                            <div class="content_with_padding" style="max-width:unset;">
+                                <?= $element->description; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tablet/mobile view -->
+            <div class="box_flex flex_mob main_padding tab_show">
+                <div class="grid-2 gtab-1 mb-5" style="min-height:504px;">
+                    <div class="box_flex flex_c small_padding">
+                        <div class="grid-1">
+                            <div class="box_flex pb-5">
+                                <p class="second_header"><?= $element->title; ?></p>
+                            </div>
+                            <div class="work-photo-border" style="min-height:500px;">
+                                <div class="item_container_picture" style="max-width:642px;background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"></div>
                             </div>
                             <div class="content_with_padding" style="max-width:unset;">
                                 <?= $element->description; ?>
