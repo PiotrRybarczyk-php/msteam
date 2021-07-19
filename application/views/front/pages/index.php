@@ -49,11 +49,11 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[1]->photo; ?>);">
+                            <a href="#" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[1]->photo; ?>);">
                                 <div class="img_overlay">
                                     <p><?= $offer[1]->title; ?></p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="item_container_center tab_show my-4">
@@ -61,11 +61,11 @@
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[2]->photo; ?>);">
+                            <a href="#" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[2]->photo; ?>);">
                                 <div class="img_overlay">
                                     <p><?= $offer[2]->title; ?></p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="item_container_center tab_show my-4">
@@ -74,11 +74,11 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[3]->photo; ?>);">
+                            <a href="#" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[3]->photo; ?>);">
                                 <div class="img_overlay">
                                     <p><?= $offer[3]->title; ?></p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="item_container_center tab_show my-4">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div class="item_container_align medium_padding">
-                    <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $info[1]->photo;  ?>);"></div>
+                    <div class="offer-photo" style="pointer-events:none;background-image: url(<?= base_url('uploads/') . $info[1]->photo;  ?>);"></div>
                 </div>
                 <div class="item_container_center tab_show mt-5"><a class="blank" href="<?= $info[1]->link; ?>"><button class="btn_JS"><?= $info[1]->button; ?></button></a></div>
             </div>

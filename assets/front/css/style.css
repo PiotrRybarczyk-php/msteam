@@ -187,6 +187,7 @@ a.footer_link:hover {
   height: 27vw;
   width: 100%;
   margin: auto;
+  text-decoration: none;
 }
 
 .offer-photo {
@@ -607,6 +608,9 @@ p.contact_info {
   .tile_line {
     border-right: none;
   }
+  .carousel-photo .carousel-content h1 {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -630,10 +634,10 @@ p.contact_info {
     padding: 10px 10px;
     transition: 0.5s all;
     text-decoration: none;
-    font-size: 38px;
+    font-size: 20px;
     margin-top: 50px;
     text-align: center;
-    width: 260px;
+    width: 160px;
   }
   .header-section .header-title {
     font-size: 22px;
