@@ -49,7 +49,7 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="top:0px;left:0px;"><span class="line_a_h_black"></span><span class="line_a_h_cyan"></span><span class="line_a_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <a href="#" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[1]->photo; ?>);">
+                            <a href="oferta_1" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[1]->photo; ?>);">
                                 <div class="img_overlay">
                                     <p><?= $offer[1]->title; ?></p>
                                 </div>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="item_container_center small_padding">
                         <div class="offer-photo-border">
-                            <a href="#" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[2]->photo; ?>);">
+                            <a href="oferta_2" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[2]->photo; ?>);">
                                 <div class="img_overlay">
                                     <p><?= $offer[2]->title; ?></p>
                                 </div>
@@ -74,7 +74,7 @@
                     <div class="item_container_center small_padding">
                         <div class="absolute_el" style="bottom:0px;right:0px;"><span class="line_b_h_black"></span><span class="line_b_v_cyan"></span><span class="line_b_v_black"></span></div>
                         <div class="offer-photo-border">
-                            <a href="#" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[3]->photo; ?>);">
+                            <a href="oferta_3" class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $offer[3]->photo; ?>);">
                                 <div class="img_overlay">
                                     <p><?= $offer[3]->title; ?></p>
                                 </div>
