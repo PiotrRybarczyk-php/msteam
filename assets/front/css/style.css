@@ -332,6 +332,10 @@ p.small_content {
   opacity: 0.5;
 }
 
+.v_margin{
+  margin: 4vw 0px 4vw 0px;
+}
+
 .line_a_h_black {
   position: absolute;
   width: 360px;

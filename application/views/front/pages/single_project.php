@@ -3,7 +3,7 @@
         <p><?= $banner->title; ?></p>
     </div>
 </div>
-<div class="box_normal main_padding">
+<div class="box_normal main_padding v_margin">
     <div class="grid-4 gtab-2 gmob-1" style="grid-row-gap:20px;">
         <?php foreach ($picture as $item) : ?>
             <div class="work-photo-border" style="max-width:360px;height:340px;">
