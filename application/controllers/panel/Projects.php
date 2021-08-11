@@ -35,6 +35,21 @@ class Projects extends CI_Controller
 		}
 	}
 
+	public function gallery($id)
+	{
+		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {
+			// DEFAULT DATA
+			$data = loadDefaultData();
+
+			$data['project'] = $this->back_m->get_one('projects', $id);
+			$data['gallery'] = $this->back_m->get_images('gallery', 'projects', $id);
+
+			echo loadSubViewsBack($this->uri->segment(2), 'gallery', $data);
+		} else {
+			redirect('panel');
+		}
+	}
+
 	public function action($type, $table, $id = '')
 	{
 		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {

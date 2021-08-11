@@ -75,9 +75,36 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_one('logos', 1);
 		$data['banner'] = $this->back_m->get_one('logos', 4);
-		$data['project'] = $this->back_m->get_with_limit('projects', 10, 'desc');
+		$data['project'] = $this->back_m->get_with_limit('projects', 3, 'asc');
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('reals', $data);
+	}
+	public function real_1()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 11);
+		$data['cp'] = $this->uri->segment(1);
+		$data['picture'] = $this->back_m->get_images('gallery', 'projects', '1');
+		echo loadViewsFront('single_project', $data);
+	}
+	public function real_2()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 12);
+		$data['cp'] = $this->uri->segment(1);
+		$data['picture'] = $this->back_m->get_images('gallery', 'projects', '2');
+		echo loadViewsFront('single_project', $data);
+	}
+	public function real_3()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 13);
+		$data['cp'] = $this->uri->segment(1);
+		$data['picture'] = $this->back_m->get_images('gallery', 'projects', '3');
+		echo loadViewsFront('single_project', $data);
 	}
 	public function work()
 	{
@@ -125,5 +152,14 @@ class Home extends CI_Controller
 		$data['about'] = $this->back_m->get_one('aboutus', 2);
 		$data['cp'] = $this->uri->segment(1);
 		echo loadViewsFront('contact', $data);
+	}
+	public function contact_old()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_one('logos', 1);
+		$data['banner'] = $this->back_m->get_one('logos', 6);
+		$data['about'] = $this->back_m->get_one('aboutus', 2);
+		$data['cp'] = $this->uri->segment(1);
+		echo loadViewsFront('contactold', $data);
 	}
 }

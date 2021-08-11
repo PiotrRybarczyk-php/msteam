@@ -25,15 +25,6 @@
                             </div><!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
-                            <!-- set -->
-                            <div class="col-md-12 pr-0">
-                                <div class="form-group bd-t-0-force bd-b-0-force">
-                                    <label class="form-control-label">Opis:</label>
-                                    <textarea class="summernote" name="description"><?php echo $value->description; ?></textarea>
-                                </div>
-                            </div><!-- col-4 -->
-                        </div> <!-- set -->
-                        <div class="row">
                             <div class="col-md-12 pr-0">
                                 <div class="form-layout-footer bd pd-20">
                                     <button class="btn btn-info" type="submit">Zapisz</button>
