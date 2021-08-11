@@ -1,7 +1,8 @@
-<h3>Nowe zapytanie ze strony Szablony</h3>
+<h3>Nowe zapytanie ze strony <a href="{base_url}">{base_url}</a></h3>
 <h3 style="font-weight: bold;">Dane kontaktowe:</h3>
 <p>Imię: {name}</p>
 <p>Adres e-mail: {email}</p>
+<p>Numer VIN: {vin}</p>
 <p>Przetwarzanie danych: {rodo1}</p>
 <p>Zgoda na kontakt telefoniczny lub email: {rodo2}</p><br>
 
