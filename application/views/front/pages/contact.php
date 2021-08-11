@@ -41,6 +41,11 @@ if (isset($_GET['link'])) {
         </div>
     </div>
 </div>
+
+<div class="box_flex flex_mob_l main_padding">
+<iframe src="<?= $contact->map; ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
 <div class="box_center main_padding" id="form">
     <div class="contact_form pt-3">
         <h2 class="contact_title">MAJĄ PAŃSTWO PYTANIA? ZAPRASZAMY DO KONTAKTU!</h2>

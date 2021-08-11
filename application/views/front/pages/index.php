@@ -249,7 +249,7 @@
                             <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $project[0]->photo; ?>);height:21vw;">
                                 <a href="<?= $project[0]->link; ?>" class="blank img_overlay">
                                     <div class="item_container">
-                                        <p class="small_content" style="text-transform:lowercase;"><?= $project[0]->subtitle; ?></p>
+                                        <p class="small_content"><?= $project[0]->subtitle; ?></p>
                                         <p class="inner_header"><?= $project[0]->title; ?></p>
                                     </div>
                                 </a>
@@ -261,7 +261,7 @@
                             <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $project[1]->photo; ?>);height:21vw;">
                                 <a href="<?= $project[1]->link; ?>" class="blank img_overlay">
                                     <div class="item_container">
-                                        <p class="small_content" style="text-transform:lowercase;"><?= $project[1]->subtitle; ?></p>
+                                        <p class="small_content"><?= $project[1]->subtitle; ?></p>
                                         <p class="inner_header"><?= $project[1]->title; ?></p>
                                     </div>
                                 </a>
@@ -274,7 +274,7 @@
                             <div class="offer-photo" style="background-image: url(<?= base_url('uploads/') . $project[2]->photo; ?>);height:21vw;">
                                 <a href="<?= $project[2]->link; ?>" class="blank img_overlay">
                                     <div class="item_container">
-                                        <p class="small_content" style="text-transform:lowercase;"><?= $project[2]->subtitle; ?></p>
+                                        <p class="small_content"><?= $project[2]->subtitle; ?></p>
                                         <p class="inner_header"><?= $project[2]->title; ?></p>
                                     </div>
                                 </a>
